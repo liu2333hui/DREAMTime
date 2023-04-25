@@ -1,0 +1,1065 @@
+========================================================
+                       DREAMPlace
+            Yibo Lin (http://yibolin.com)
+   David Z. Pan (http://users.ece.utexas.edu/~dpan)
+========================================================
+[INFO   ] DREAMPlace - parameters = {'aux_input': '', 'lef_input': 'superblue4.lef', 'def_input': 'superblue4.def', 'verilog_input': 'superblue4.v', 'gpu': 0, 'num_bins_x': 512, 'num_bins_y': 512, 'global_place_stages': [{'num_bins_x': 512, 'num_bins_y': 512, 'iteration': 1000, 'learning_rate': 0.01, 'wirelength': 'weighted_average', 'optimizer': 'nesterov'}], 'target_density': 1.0, 'density_weight': 8e-05, 'random_seed': 1000, 'result_dir': 'results', 'scale_factor': 0.0, 'shift_factor': [0.0, 0.0], 'ignore_net_degree': 100, 'gp_noise_ratio': 0.025, 'enable_fillers': 1, 'global_place_flag': 1, 'legalize_flag': 1, 'detailed_place_flag': 0, 'stop_overflow': 0.1, 'dtype': 'float32', 'detailed_place_engine': '', 'detailed_place_command': '', 'plot_flag': 1, 'RePlAce_ref_hpwl': 350000, 'RePlAce_LOWER_PCOF': 0.95, 'RePlAce_UPPER_PCOF': 1.05, 'gamma': 4, 'RePlAce_skip_energy_flag': 0, 'random_center_init_flag': 1, 'sort_nets_by_degree': 0, 'num_threads': 1, 'dump_global_place_solution_flag': 0, 'dump_legalize_solution_flag': 1, 'routability_opt_flag': 0, 'route_num_bins_x': 512, 'route_num_bins_y': 512, 'node_area_adjust_overflow': 0.15, 'max_num_area_adjust': 3, 'adjust_nctugr_area_flag': 0, 'adjust_rudy_area_flag': 1, 'adjust_pin_area_flag': 1, 'area_adjust_stop_ratio': 0.01, 'route_area_adjust_stop_ratio': 0.01, 'pin_area_adjust_stop_ratio': 0.05, 'unit_horizontal_capacity': 1.5625, 'unit_vertical_capacity': 1.45, 'unit_pin_capacity': 0.058, 'max_route_opt_adjust_rate': 2.0, 'route_opt_adjust_exponent': 2.0, 'pin_stretch_ratio': 1.414213562, 'max_pin_opt_adjust_rate': 1.5, 'deterministic_flag': 0, 'timer_sdc': 'superblue4.sdc', 'timer_libs': ['superblue4_Early.lib', 'superblue4_Late.lib'], 'r_per_u': 2.535, 'c_per_u': 1.6e-16, 'timing_driven': 1}
+[INFO   ] lef_input = superblue4.lef 
+[INFO   ] def_input = superblue4.def
+[INFO   ] verilog_input = superblue4.v
+[INFO   ] bookshelf_aux_input = 
+[INFO   ] bookshelf_pl_input = 
+[INFO   ] def_size_input = 
+[INFO   ] def_output = superblue4-out.def
+[INFO   ] rpt_output = 
+[INFO   ] target_util = 0
+[INFO   ] max_displace = 0
+[INFO   ] bin size = (10, 10) #rows
+[INFO   ] sbin size = (5, 5) #rows
+[INFO   ] bin_space_threshold = 0.2
+[INFO   ] abu = 2,10 5,5 10,2 20,1 
+[INFO   ] def_ignore_cells = 
+[INFO   ] macro_obs_aware_layers = 
+[INFO   ] enable_place = true
+[INFO   ] enable_legalize = true
+[INFO   ] evaluate_overlap = false
+[INFO   ] move_multi_row_cell = true
+[INFO   ] align_power_line = true
+[INFO   ] cluster_cell = false
+[INFO   ] sort_nets_by_degree = false
+[INFO   ] file_format = DEF
+[INFO   ] max_iters = 6
+[INFO   ] reading superblue4.lef
+[INFO   ] reading superblue4.def
+[INFO   ] detect 1840 rows, 795645 components, 6623 IO pins, 0 nets, 0 blockages
+[INFO   ] set CORE site to core, 380 x 3420, id = 0
+[INFO   ] reading superblue4.v
+[WARNING] no Bookshelf file specified
+[WARNING] no additional Bookshelf .pl file specified
+[WARNING] 0 nets with 0 pins from same nodes
+[WARNING] 0 nets should be ignored due to not enough pins
+[INFO   ] sort nodes in the order of movable and fixed
+[INFO   ] Group cells for fence regions
+[INFO   ] Construct 0 groups
+[INFO   ] Fence region groups done
+[DEBUG  ] num_terminals 38666, numFixed 38666, numPlaceBlockages 0, num_terminal_NIs 6623
+[INFO   ] -- Converting Node Orientati[INFO   ] DREAMPlace - set shift_factor = (13680, 6840), as original row bbox = (13680, 6840, 1.13369e+07, 6.29964e+06)
+[INFO   ] DREAMPlace - set scale_factor = 0.00263158, as site_width = 380
+[INFO   ] DREAMPlace - shift coordinate system by (13680, 6840), scale coordinate system by 0.00263158
+[INFO   ] DREAMPlace - 
+================================= Benchmark Statistics =================================
+#nodes = 802268, #terminals = 38666, # terminal_NIs = 6623, #movable = 756979, #nets = 802513
+die area = (0, 0, 29798, 16560) 4.93455e+08
+row height = 9, site width = 1
+#pins = 2497940, #movable_pins = 2379623
+total_movable_node_area = 1.42547e+08, total_fixed_node_area = 2.52876e+08, total_space_area = 2.48407e+08
+utilization = 0.573843, target_density = 1
+use placeable_area = 2.48407e+08 to compute fillers
+total_filler_node_area = 1.05861e+08, #fillers = 582908, filler sizes = 20.1786x9
+num_bins = 512x512, bin sizes = 6.46658x3.59375
+========================================================================================
+[INFO   ] DREAMPlace - reading benchmark takes 19.9196 seconds
+[INFO   ] DREAMPlace - reading database takes 19.92 seconds
+Start running STA
+Run timer - 82.23517775535583 s 
+Time-driven weights
+Tns, Wns
+-4750.91 -18.2772
+===================
+INITIAL
+INITIAL
+[INFO   ] DREAMPlace - move cells to the center of layout with random noise
+[INFO   ] DREAMPlace - non-linear placement initialization takes 4.48 seconds
+[INFO   ] DREAMPlace - Global placement: 512x512 bins by default
+[INFO   ] DREAMPlace - 512x512 bins #bins 512x512, bin sizes 6.46658x3.59375, max_num_bins = 4, padding = 0
+[INFO   ] dreamplace.ops.electric_potential.electric_potential - regard 0 cells as movable macros in global placement
+[WARNING] DREAMPlace - quadratic density penalty is disabled, density weight update is forced to be based on HPWL
+[INFO   ] DREAMPlace - use nesterov optimizer
+[INFO   ] DREAMPlace - add 2.5% noise
+[INFO   ] dreamplace.ops.electric_potential.electric_potential - fixed density map: average 934.835, max 1882.38, bin area 1882.38
+[INFO   ] DREAMPlace - nesterov initialization takes 3.7905 seconds
+[INFO   ] DREAMPlace - density_weight = 3.698616E-10
+[I] plotting to results/superblue4/plot/iter0000.png takes 13.133 seconds
+[INFO   ] DREAMPlace - plotting to results/superblue4/plot/iter0000.png takes 13.277 seconds
+[INFO   ] DREAMPlace - optimizer step 1948.451 ms
+[INFO   ] DREAMPlace - iteration    0, (   0,  0,  0), Obj -2.064107E+10, DensityWeight 0.000000E+00, HPWL -2.302764E+10, Overflow 9.998183E-01, MaxDensity 1.893E+04, gamma 3.621719E+03, time 105.984ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln0.def
+on --
+[INFO   ] ---------------------------------
+[INFO   ] -------- Area Statistics --------
+[INFO   ] fixed area overlap = 3.53849e+13
+[INFO   ] fixed area total = 3.65153e+13
+[INFO   ] space area = 3.587e+13
+[INFO   ] ---------------------------------
+[INFO   ] writing placement to results/superblue4/plot/iter0000.png
+[WARNING] filename = results/superblue4/plot/iter0000.png, width = 800, height = 445, file format = 3 not used, as DRAWPLACE not enabled
+[INFO   ] writing placement to def/soln0.def
+[ERROR [INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.080 seconds
+[INFO   ] DREAMPlace - full step 16071.910 ms
+[INFO   ] DREAMPlace - optimizer step 617.132 ms
+[INFO   ] DREAMPlace - iteration    1, (   1,  0,  0), Obj -3.518321E+10, DensityWeight 3.698616E-10, HPWL -3.882345E+10, Overflow 9.953673E-01, MaxDensity 1.878E+04, gamma 3.618352E+03, time 115.409ms
+[INFO   ] DREAMPlace - full step 740.547 ms
+[INFO   ] DREAMPlace - optimizer step 635.150 ms
+[INFO   ] DREAMPlace - iteration    2, (   2,  0,  0), Obj -6.529983E+10, DensityWeight 3.882770E-10, HPWL -6.912719E+10, Overflow 9.932282E-01, MaxDensity 1.864E+04, gamma 3.536877E+03, time 111.745ms
+[INFO   ] DREAMPlace - full step 760.623 ms
+[INFO   ] DREAMPlace - optimizer step 637.436 ms
+[INFO   ] DREAMPlace - iteration    3, (   3,  0,  0), Obj -8.809634E+10, DensityWeight 4.075686E-10, HPWL -9.081582E+10, Overflow 9.920703E-01, MaxDensity 1.850E+04, gamma 3.498374E+03, time 107.380ms
+[INFO   ] DREAMPlace - full step 752.158 ms
+[INFO   ] DREAMPlace - optimizer step 622.982 ms
+[INFO   ] DREAMPlace - iteration    4, (   4,  0,  0), Obj -9.561793E+10, DensityWeight 4.277758E-10, HPWL -9.772562E+10, Overflow 9.918070E-01, MaxDensity 1.844E+04, gamma 3.477709E+03, time 111.266ms
+[INFO   ] DREAMPlace - full step 745.348 ms
+[INFO   ] DREAMPlace - optimizer step 1243.550 ms
+[INFO   ] DREAMPlace - iteration    5, (   5,  0,  0), Obj -9.686980E+10, DensityWeight 4.489401E-10, HPWL -9.879760E+10, Overflow 9.905005E-01, MaxDensity 1.858E+04, gamma 3.473026E+03, time 108.156ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln5.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 1388.974 ms
+[INFO   ] DREAMPlace - optimizer step 1212.212 ms
+[INFO   ] DREAMPlace - iteration    6, (   6,  0,  0), Obj -9.706437E+10, DensityWeight 4.711043E-10, HPWL -9.894710E+10, Overflow 9.886541E-01, MaxDensity 1.881E+04, gamma 3.449885E+03, time 107.630ms
+[INFO   ] DREAMPlace - full step 1330.642 ms
+[INFO   ] DREAMPlace - optimizer step 633.666 ms
+[INFO   ] DREAMPlace - iteration    7, (   7,  0,  0), Obj -9.717626E+10, DensityWeight 4.943134E-10, HPWL -9.900100E+10, Overflow 9.867567E-01, MaxDensity 1.905E+04, gamma 3.417447E+03, time 111.455ms
+[INFO   ] DREAMPlace - full step 753.617 ms
+[INFO   ] DREAMPlace - optimizer step 620.794 ms
+[INFO   ] DREAMPlace - iteration    8, (   8,  0,  0), Obj -9.728086E+10, DensityWeight 5.186140E-10, HPWL -9.903848E+10, Overflow 9.848716E-01, MaxDensity 1.929E+04, gamma 3.384427E+03, time 106.189ms
+[INFO   ] DREAMPlace - full step 740.251 ms
+[INFO   ] DREAMPlace - optimizer step 621.769 ms
+[INFO   ] DREAMPlace - iteration    9, (   9,  0,  0), Obj -9.737549E+10, DensityWeight 5.440547E-10, HPWL -9.906678E+10, Overflow 9.827900E-01, MaxDensity 1.954E+04, gamma 3.351938E+03, time 105.730ms
+[INFO   ] DREAMPlace - full step 735.091 ms
+[INFO   ] DREAMPlace - optimizer step 619.906 ms
+[INFO   ] DREAMPlace - iteration   10, (  10,  0,  0), Obj -9.744135E+10, DensityWeight 5.706864E-10, HPWL -9.907347E+10, Overflow 9.804158E-01, MaxDensity 1.982E+04, gamma 3.316425E+03, time 112.509ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln10.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.051 seconds
+[INFO   ] DREAMPlace - full step 793.105 ms
+[INFO   ] DREAMPlace - optimizer step 2384.182 ms
+[INFO   ] DREAMPlace - iteration   11, (  11,  0,  0), Obj -9.751224E+10, DensityWeight 5.985619E-10, HPWL -9.908175E+10, Overflow 9.775490E-01, MaxDensity 2.011E+04, gamma 3.276380E+03, time 111.671ms
+[INFO   ] DREAMPlace - full step 2505.027 ms
+[INFO   ] DREAMPlace - optimizer step 443.522 ms
+[INFO   ] DREAMPlace - iteration   12, (  12,  0,  0), Obj -9.759805E+10, DensityWeight 6.277363E-10, HPWL -9.909658E+10, Overflow 9.737701E-01, MaxDensity 2.044E+04, gamma 3.228670E+03, time 82.939ms
+[INFO   ] DREAMPlace - full step 533.149 ms
+[INFO   ] DREAMPlace - optimizer step 496.752 ms
+[INFO   ] DREAMPlace - iteration   13, (  13,  0,  0), Obj -9.768829E+10, DensityWeight 6.582667E-10, HPWL -9.910523E+10, Overflow 9.698312E-01, MaxDensity 2.072E+04, gamma 3.166838E+03, time 81.133ms
+[INFO   ] DREAMPlace - full step 585.079 ms
+[INFO   ] DREAMPlace - optimizer step 449.265 ms
+[INFO   ] DREAMPlace - iteration   14, (  14,  0,  0), Obj -9.780214E+10, DensityWeight 6.902130E-10, HPWL -9.911720E+10, Overflow 9.646745E-01, MaxDensity 2.096E+04, gamma 3.103651E+03, time 112.149ms
+[INFO   ] DREAMPlace - full step 568.603 ms
+[INFO   ] DREAMPlace - optimizer step 463.781 ms
+[INFO   ] DREAMPlace - iteration   15, (  15,  0,  0), Obj -9.791758E+10, DensityWeight 7.236374E-10, HPWL -9.912949E+10, Overflow 9.587960E-01, MaxDensity 2.109E+04, gamma 3.022828E+03, time 81.580ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln15.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.028 seconds
+[INFO   ] DREAMPlace - full step 581.060 ms
+[INFO   ] DREAMPlace - optimizer step 929.723 ms
+[INFO   ] DREAMPlace - iteration   16, (  16,  0,  0), Obj -9.805496E+10, DensityWeight 7.586045E-10, HPWL -9.914175E+10, Overflow 9.514623E-01, MaxDensity 2.104E+04, gamma 2.933258E+03, time 79.573ms
+[INFO   ] DREAMPlace - full step 1016.234 ms
+[INFO   ] DREAMPlace - optimizer step 1754.184 ms
+[INFO   ] DREAMPlace - iteration   17, (  17,  0,  0), Obj -9.819962E+10, DensityWeight 7.951817E-10, HPWL -9.915517E+10, Overflow 9.449826E-01, MaxDensity 2.083E+04, gamma 2.825225E+03, time 79.084ms
+[INFO   ] DREAMPlace - full step 1841.395 ms
+[INFO   ] DREAMPlace - optimizer step 421.886 ms
+[INFO   ] DREAMPlace - iteration   18, (  18,  0,  0), Obj -5.092060E+10, DensityWeight 8.334392E-10, HPWL -5.240111E+10, Overflow 9.402011E-01, MaxDensity 2.068E+04, gamma 2.733090E+03, time 78.001ms
+[INFO   ] DREAMPlace - full step 507.288 ms
+[INFO   ] DREAMPlace - optimizer step 946.280 ms
+[INFO   ] DREAMPlace - iteration   19, (  19,  0,  0), Obj -5.123584E+10, DensityWeight 8.313555E-10, HPWL -5.256334E+10, Overflow 9.350274E-01, MaxDensity 2.049E+04, gamma 2.667033E+03, time 78.926ms
+[INFO   ] DREAMPlace - full step 1032.215 ms
+[INFO   ] DREAMPlace - optimizer step 1021.329 ms
+[INFO   ] DREAMPlace - iteration   20, (  20,  0,  0), Obj -5.139825E+10, DensityWeight 8.711791E-10, HPWL -5.274042E+10, Overflow 9.336398E-01, MaxDensity 2.025E+04, gamma 2.597354E+03, time 85.465ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln20.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 1137.868 ms
+[INFO   ] DREAMPlace - optimizer step 473.799 ms
+[INFO   ] DREAMPlace - iteration   21, (  21,  0,  0), Obj -5.267991E+10, DensityWeight 9.128190E-10, HPWL -5.401754E+10, Overflow 9.337379E-01, MaxDensity 2.003E+04, gamma 2.578978E+03, time 80.400ms
+[INFO   ] DREAMPlace - full step 558.690 ms
+[INFO   ] DREAMPlace - optimizer step 449.094 ms
+[INFO   ] DREAMPlace - iteration   22, (  22,  0,  0), Obj -6.630638E+10, DensityWeight 9.563536E-10, HPWL -6.835658E+10, Overflow 9.286708E-01, MaxDensity 1.982E+04, gamma 2.580273E+03, time 87.682ms
+[INFO   ] DREAMPlace - full step 544.510 ms
+[INFO   ] DREAMPlace - optimizer step 457.207 ms
+[INFO   ] DREAMPlace - iteration   23, (  23,  0,  0), Obj -8.949614E+10, DensityWeight 1.001864E-09, HPWL -9.040637E+10, Overflow 9.264186E-01, MaxDensity 1.962E+04, gamma 2.514231E+03, time 77.895ms
+[INFO   ] DREAMPlace - full step 541.924 ms
+[INFO   ] DREAMPlace - optimizer step 867.811 ms
+[INFO   ] DREAMPlace - iteration   24, (  24,  0,  0), Obj -9.831625E+10, DensityWeight 1.049436E-09, HPWL -9.881358E+10, Overflow 9.242113E-01, MaxDensity 1.938E+04, gamma 2.485424E+03, time 86.105ms
+[INFO   ] DREAMPlace - full step 963.485 ms
+[INFO   ] DREAMPlace - optimizer step 1252.405 ms
+[INFO   ] DREAMPlace - iteration   25, (  25,  0,  0), Obj -9.892025E+10, DensityWeight 1.099156E-09, HPWL -9.938069E+10, Overflow 9.216006E-01, MaxDensity 1.914E+04, gamma 2.457510E+03, time 78.802ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln25.def
+ ] unable to open def/soln0.def for write
+[INFO   ] writing placement to def/soln5.def
+[ERROR  ] unable to open def/soln5.def for write
+[INFO   ] writing placement to def/soln10.def
+[ERROR  ] unable to open def/soln10.def for write
+[INFO   ] writing placement to def/soln15.def
+[ERROR  ] unable to open def/soln15.def for write
+[INFO   ] writing placement to def/soln20.def
+[ERROR  ] unable to open def/soln20.def for write
+[INFO   ] writing placement to def/soln25.def
+[ERROR  ] unable to open def/soln25.def fo[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.021 seconds
+[INFO   ] DREAMPlace - full step 1360.231 ms
+[INFO   ] DREAMPlace - optimizer step 458.014 ms
+[INFO   ] DREAMPlace - iteration   26, (  26,  0,  0), Obj -9.898811E+10, DensityWeight 1.151117E-09, HPWL -9.939997E+10, Overflow 9.183772E-01, MaxDensity 1.888E+04, gamma 2.424900E+03, time 80.059ms
+[INFO   ] DREAMPlace - full step 545.455 ms
+[INFO   ] DREAMPlace - optimizer step 441.701 ms
+[INFO   ] DREAMPlace - iteration   27, (  27,  0,  0), Obj -9.903416E+10, DensityWeight 1.205413E-09, HPWL -9.941098E+10, Overflow 9.161689E-01, MaxDensity 1.860E+04, gamma 2.385233E+03, time 81.570ms
+[INFO   ] DREAMPlace - full step 531.016 ms
+[INFO   ] DREAMPlace - optimizer step 1721.552 ms
+[INFO   ] DREAMPlace - iteration   28, (  28,  0,  0), Obj -9.909112E+10, DensityWeight 1.262145E-09, HPWL -9.942846E+10, Overflow 9.127469E-01, MaxDensity 1.824E+04, gamma 2.358432E+03, time 77.708ms
+[INFO   ] DREAMPlace - full step 1806.095 ms
+[INFO   ] DREAMPlace - optimizer step 448.839 ms
+[INFO   ] DREAMPlace - iteration   29, (  29,  0,  0), Obj -7.335369E+10, DensityWeight 1.321414E-09, HPWL -7.449131E+10, Overflow 9.102659E-01, MaxDensity 1.799E+04, gamma 2.317496E+03, time 84.979ms
+[INFO   ] DREAMPlace - full step 540.900 ms
+[INFO   ] DREAMPlace - optimizer step 447.873 ms
+[INFO   ] DREAMPlace - iteration   30, (  30,  0,  0), Obj -7.532200E+10, DensityWeight 1.318111E-09, HPWL -7.608759E+10, Overflow 9.080772E-01, MaxDensity 1.774E+04, gamma 2.288262E+03, time 80.384ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln30.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 557.770 ms
+[INFO   ] DREAMPlace - optimizer step 894.897 ms
+[INFO   ] DREAMPlace - iteration   31, (  31,  0,  0), Obj -7.544225E+10, DensityWeight 1.379732E-09, HPWL -7.616490E+10, Overflow 9.056723E-01, MaxDensity 1.749E+04, gamma 2.262777E+03, time 78.697ms
+[INFO   ] DREAMPlace - full step 980.673 ms
+[INFO   ] DREAMPlace - optimizer step 1330.665 ms
+[INFO   ] DREAMPlace - iteration   32, (  32,  0,  0), Obj -7.551218E+10, DensityWeight 1.444090E-09, HPWL -7.624912E+10, Overflow 9.034739E-01, MaxDensity 1.721E+04, gamma 2.235103E+03, time 78.558ms
+[INFO   ] DREAMPlace - full step 1417.670 ms
+[INFO   ] DREAMPlace - optimizer step 453.352 ms
+[INFO   ] DREAMPlace - iteration   33, (  33,  0,  0), Obj -6.308924E+10, DensityWeight 1.511299E-09, HPWL -6.399086E+10, Overflow 9.026828E-01, MaxDensity 1.699E+04, gamma 2.210101E+03, time 79.363ms
+[INFO   ] DREAMPlace - full step 539.609 ms
+[INFO   ] DREAMPlace - optimizer step 437.017 ms
+[INFO   ] DREAMPlace - iteration   34, (  34,  0,  0), Obj -8.872255E+10, DensityWeight 1.507520E-09, HPWL -8.918215E+10, Overflow 8.984472E-01, MaxDensity 1.678E+04, gamma 2.201174E+03, time 77.849ms
+[INFO   ] DREAMPlace - full step 521.956 ms
+[INFO   ] DREAMPlace - optimizer step 453.768 ms
+[INFO   ] DREAMPlace - iteration   35, (  35,  0,  0), Obj -9.634294E+10, DensityWeight 1.577366E-09, HPWL -9.660672E+10, Overflow 8.957882E-01, MaxDensity 1.648E+04, gamma 2.153980E+03, time 77.149ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln35.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.023 seconds
+[INFO   ] DREAMPlace - full step 561.352 ms
+[INFO   ] DREAMPlace - optimizer step 2647.886 ms
+[INFO   ] DREAMPlace - iteration   36, (  36,  0,  0), Obj -9.934796E+10, DensityWeight 1.650282E-09, HPWL -9.950099E+10, Overflow 8.936900E-01, MaxDensity 1.613E+04, gamma 2.124873E+03, time 82.002ms
+[INFO   ] DREAMPlace - full step 2739.426 ms
+[INFO   ] DREAMPlace - optimizer step 464.617 ms
+[INFO   ] DREAMPlace - iteration   37, (  37,  0,  0), Obj -7.846458E+10, DensityWeight 1.726396E-09, HPWL -7.910950E+10, Overflow 8.923505E-01, MaxDensity 1.588E+04, gamma 2.102182E+03, time 78.150ms
+[INFO   ] DREAMPlace - full step 550.271 ms
+[INFO   ] DREAMPlace - optimizer step 455.730 ms
+[INFO   ] DREAMPlace - iteration   38, (  38,  0,  0), Obj -7.896906E+10, DensityWeight 1.722080E-09, HPWL -7.948891E+10, Overflow 8.894714E-01, MaxDensity 1.565E+04, gamma 2.087823E+03, time 83.324ms
+[INFO   ] DREAMPlace - full step 545.814 ms
+[INFO   ] DREAMPlace - optimizer step 880.538 ms
+[INFO   ] DREAMPlace - iteration   39, (  39,  0,  0), Obj -7.968195E+10, DensityWeight 1.801146E-09, HPWL -8.018149E+10, Overflow 8.869520E-01, MaxDensity 1.539E+04, gamma 2.057290E+03, time 83.252ms
+[INFO   ] DREAMPlace - full step 971.025 ms
+[INFO   ] DREAMPlace - optimizer step 961.407 ms
+[INFO   ] DREAMPlace - iteration   40, (  40,  0,  0), Obj -7.978678E+10, DensityWeight 1.883653E-09, HPWL -8.027605E+10, Overflow 8.843810E-01, MaxDensity 1.513E+04, gamma 2.030940E+03, time 77.882ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln40.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 1068.229 ms
+[INFO   ] DREAMPlace - optimizer step 479.882 ms
+[INFO   ] DREAMPlace - iteration   41, (  41,  0,  0), Obj -6.231434E+10, DensityWeight 1.969743E-09, HPWL -6.418097E+10, Overflow 8.848724E-01, MaxDensity 1.490E+04, gamma 2.004396E+03, time 83.948ms
+[INFO   ] DREAMPlace - full step 568.462 ms
+[INFO   ] DREAMPlace - optimizer step 497.634 ms
+[INFO   ] DREAMPlace - iteration   42, (  42,  0,  0), Obj -8.035108E+10, DensityWeight 1.964818E-09, HPWL -8.116865E+10, Overflow 8.784100E-01, MaxDensity 1.469E+04, gamma 2.009443E+03, time 78.300ms
+[INFO   ] DREAMPlace - full step 583.391 ms
+[INFO   ] DREAMPlace - optimizer step 1633.057 ms
+[INFO   ] DREAMPlace - iteration   43, (  43,  0,  0), Obj -8.564335E+10, DensityWeight 2.054207E-09, HPWL -8.610568E+10, Overflow 8.760155E-01, MaxDensity 1.446E+04, gamma 1.944082E+03, time 106.731ms
+[INFO   ] DREAMPlace - full step 1749.643 ms
+[INFO   ] DREAMPlace - optimizer step 948.483 ms
+[INFO   ] DREAMPlace - iteration   44, (  44,  0,  0), Obj -8.708312E+10, DensityWeight 2.147447E-09, HPWL -8.807121E+10, Overflow 8.739566E-01, MaxDensity 1.425E+04, gamma 1.920408E+03, time 78.052ms
+[INFO   ] DREAMPlace - full step 1033.842 ms
+[INFO   ] DREAMPlace - optimizer step 560.066 ms
+[INFO   ] DREAMPlace - iteration   45, (  45,  0,  0), Obj -6.050234E+10, DensityWeight 2.244695E-09, HPWL -6.243391E+10, Overflow 8.739758E-01, MaxDensity 1.407E+04, gamma 1.900283E+03, time 84.060ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln45.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 670.951 ms
+[INFO   ] DREAMPlace - optimizer step 438.693 ms
+[INFO   ] DREAMPlace - iteration   46, (  46,  0,  0), Obj -7.320853E+10, DensityWeight 2.239083E-09, HPWL -7.451231E+10, Overflow 8.718044E-01, MaxDensity 1.390E+04, gamma 1.900469E+03, time 79.108ms
+[INFO   ] DREAMPlace - full step 525.202 ms
+[INFO   ] DREAMPlace - optimizer step 913.720 ms
+[INFO   ] DREAMPlace - iteration   47, (  47,  0,  0), Obj -9.110282E+10, DensityWeight 2.340012E-09, HPWL -9.138519E+10, Overflow 8.680834E-01, MaxDensity 1.373E+04, gamma 1.879470E+03, time 98.877ms
+[INFO   ] DREAMPlace - full step 1019.358 ms
+[INFO   ] DREAMPlace - optimizer step 601.681 ms
+[INFO   ] DREAMPlace - iteration   48, (  48,  0,  0), Obj -9.346168E+10, DensityWeight 2.445247E-09, HPWL -9.370684E+10, Overflow 8.661431E-01, MaxDensity 1.357E+04, gamma 1.844024E+03, time 80.606ms
+[INFO   ] DREAMPlace - full step 689.326 ms
+[INFO   ] DREAMPlace - optimizer step 629.452 ms
+[INFO   ] DREAMPlace - iteration   49, (  49,  0,  0), Obj -9.572494E+10, DensityWeight 2.554959E-09, HPWL -9.582812E+10, Overflow 8.644929E-01, MaxDensity 1.342E+04, gamma 1.825807E+03, time 113.579ms
+[INFO   ] DREAMPlace - full step 757.329 ms
+[INFO   ] DREAMPlace - optimizer step 1765.170 ms
+[INFO   ] DREAMPlace - iteration   50, (  50,  0,  0), Obj -9.748629E+10, DensityWeight 2.669326E-09, HPWL -9.754196E+10, Overflow 8.627123E-01, MaxDensity 1.322E+04, gamma 1.810455E+03, time 114.193ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln50.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 1910.579 ms
+[INFO   ] DREAMPlace - optimizer step 438.645 ms
+[INFO   ] DREAMPlace - iteration   51, (  51,  0,  0), Obj -6.771918E+10, DensityWeight 2.788534E-09, HPWL -6.906824E+10, Overflow 8.651460E-01, MaxDensity 1.305E+04, gamma 1.794035E+03, time 84.372ms
+[INFO   ] DREAMPlace - full step 528.932 ms
+[INFO   ] DREAMPlace - optimizer step 940.452 ms
+[INFO   ] DREAMPlace - iteration   52, (  52,  0,  0), Obj -9.791105E+10, DensityWeight 2.781562E-09, HPWL -9.797874E+10, Overflow 8.593342E-01, MaxDensity 1.288E+04, gamma 1.816516E+03, time 88.791ms
+[INFO   ] DREAMPlace - full step 1037.618 ms
+[INFO   ] DREAMPlace - optimizer step 875.597 ms
+[INFO   ] DREAMPlace - iteration   53, (  53,  0,  0), Obj -9.779395E+10, DensityWeight 2.905201E-09, HPWL -9.816189E+10, Overflow 8.575882E-01, MaxDensity 1.267E+04, gamma 1.763291E+03, time 79.549ms
+[INFO   ] DREAMPlace - full step 961.936 ms
+[INFO   ] DREAMPlace - optimizer step 434.545 ms
+[INFO   ] DREAMPlace - iteration   54, (  54,  0,  0), Obj -6.664648E+10, DensityWeight 3.034032E-09, HPWL -6.787674E+10, Overflow 8.582705E-01, MaxDensity 1.251E+04, gamma 1.747608E+03, time 80.311ms
+[INFO   ] DREAMPlace - full step 519.636 ms
+[INFO   ] DREAMPlace - optimizer step 438.465 ms
+[INFO   ] DREAMPlace - iteration   55, (  55,  0,  0), Obj -8.403936E+10, DensityWeight 3.026447E-09, HPWL -8.420771E+10, Overflow 8.559827E-01, MaxDensity 1.234E+04, gamma 1.753720E+03, time 79.344ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln55.def
+r write
+[INFO   ] writing placement to def/soln30.def
+[ERROR  ] unable to open def/soln30.def for write
+[INFO   ] writing placement to def/soln35.def
+[ERROR  ] unable to open def/soln35.def for write
+[INFO   ] writing placement to def/soln40.def
+[ERROR  ] unable to open def/soln40.def for write
+[INFO   ] writing placement to def/soln45.def
+[ERROR  ] unable to open def/soln45.def for write
+[INFO   ] writing placement to def/soln50.def
+[ERROR  ] unable to open def/soln50.def for write
+[INFO   ] writing placem[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 548.394 ms
+[INFO   ] DREAMPlace - optimizer step 1323.768 ms
+[INFO   ] DREAMPlace - iteration   56, (  56,  0,  0), Obj -9.055487E+10, DensityWeight 3.160023E-09, HPWL -9.063494E+10, Overflow 8.525469E-01, MaxDensity 1.216E+04, gamma 1.733310E+03, time 80.060ms
+[INFO   ] DREAMPlace - full step 1410.968 ms
+[INFO   ] DREAMPlace - optimizer step 454.562 ms
+[INFO   ] DREAMPlace - iteration   57, (  57,  0,  0), Obj -9.073879E+10, DensityWeight 3.299164E-09, HPWL -9.080055E+10, Overflow 8.508685E-01, MaxDensity 1.197E+04, gamma 1.703104E+03, time 79.865ms
+[INFO   ] DREAMPlace - full step 545.728 ms
+[INFO   ] DREAMPlace - optimizer step 478.680 ms
+[INFO   ] DREAMPlace - iteration   58, (  58,  0,  0), Obj -9.085694E+10, DensityWeight 3.444088E-09, HPWL -9.089892E+10, Overflow 8.491883E-01, MaxDensity 1.178E+04, gamma 1.688541E+03, time 84.749ms
+[INFO   ] DREAMPlace - full step 571.925 ms
+[INFO   ] DREAMPlace - optimizer step 1321.148 ms
+[INFO   ] DREAMPlace - iteration   59, (  59,  0,  0), Obj -9.090200E+10, DensityWeight 3.595018E-09, HPWL -9.093268E+10, Overflow 8.474866E-01, MaxDensity 1.155E+04, gamma 1.674086E+03, time 84.314ms
+[INFO   ] DREAMPlace - full step 1413.057 ms
+[INFO   ] DREAMPlace - optimizer step 448.233 ms
+[INFO   ] DREAMPlace - iteration   60, (  60,  0,  0), Obj -9.093029E+10, DensityWeight 3.752187E-09, HPWL -9.095231E+10, Overflow 8.454897E-01, MaxDensity 1.131E+04, gamma 1.659572E+03, time 80.873ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln60.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 559.970 ms
+[INFO   ] DREAMPlace - optimizer step 444.820 ms
+[INFO   ] DREAMPlace - iteration   61, (  61,  0,  0), Obj -9.096431E+10, DensityWeight 3.915835E-09, HPWL -9.097656E+10, Overflow 8.430709E-01, MaxDensity 1.105E+04, gamma 1.642700E+03, time 88.840ms
+[INFO   ] DREAMPlace - full step 540.467 ms
+[INFO   ] DREAMPlace - optimizer step 1340.100 ms
+[INFO   ] DREAMPlace - iteration   62, (  62,  0,  0), Obj -9.099466E+10, DensityWeight 4.086212E-09, HPWL -9.099675E+10, Overflow 8.403386E-01, MaxDensity 1.066E+04, gamma 1.622495E+03, time 80.295ms
+[INFO   ] DREAMPlace - full step 1427.216 ms
+[INFO   ] DREAMPlace - optimizer step 1230.692 ms
+[INFO   ] DREAMPlace - iteration   63, (  63,  0,  0), Obj -9.102986E+10, DensityWeight 4.263576E-09, HPWL -9.102056E+10, Overflow 8.369417E-01, MaxDensity 1.010E+04, gamma 1.599969E+03, time 80.874ms
+[INFO   ] DREAMPlace - full step 1318.489 ms
+[INFO   ] DREAMPlace - optimizer step 909.650 ms
+[INFO   ] DREAMPlace - iteration   64, (  64,  0,  0), Obj -9.106162E+10, DensityWeight 4.448194E-09, HPWL -9.103878E+10, Overflow 8.332636E-01, MaxDensity 9.592E+03, gamma 1.572400E+03, time 85.263ms
+[INFO   ] DREAMPlace - full step 1001.766 ms
+[INFO   ] DREAMPlace - optimizer step 2303.479 ms
+[INFO   ] DREAMPlace - iteration   65, (  65,  0,  0), Obj -9.108995E+10, DensityWeight 4.640341E-09, HPWL -9.105048E+10, Overflow 8.285584E-01, MaxDensity 9.065E+03, gamma 1.543083E+03, time 80.798ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln65.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 2415.613 ms
+[INFO   ] DREAMPlace - optimizer step 503.544 ms
+[INFO   ] DREAMPlace - iteration   66, (  66,  0,  0), Obj -8.672729E+10, DensityWeight 4.840305E-09, HPWL -8.667679E+10, Overflow 8.279625E-01, MaxDensity 8.681E+03, gamma 1.506376E+03, time 80.094ms
+[INFO   ] DREAMPlace - full step 590.831 ms
+[INFO   ] DREAMPlace - optimizer step 978.321 ms
+[INFO   ] DREAMPlace - iteration   67, (  67,  0,  0), Obj -8.705934E+10, DensityWeight 4.828205E-09, HPWL -8.698673E+10, Overflow 8.226116E-01, MaxDensity 8.337E+03, gamma 1.501790E+03, time 85.593ms
+[INFO   ] DREAMPlace - full step 1071.380 ms
+[INFO   ] DREAMPlace - optimizer step 1429.993 ms
+[INFO   ] DREAMPlace - iteration   68, (  68,  0,  0), Obj -8.710754E+10, DensityWeight 5.035257E-09, HPWL -8.706814E+10, Overflow 8.186073E-01, MaxDensity 7.996E+03, gamma 1.461229E+03, time 96.051ms
+[INFO   ] DREAMPlace - full step 1535.357 ms
+[INFO   ] DREAMPlace - optimizer step 447.493 ms
+[INFO   ] DREAMPlace - iteration   69, (  69,  0,  0), Obj -6.522064E+10, DensityWeight 5.250663E-09, HPWL -6.582775E+10, Overflow 8.181654E-01, MaxDensity 7.698E+03, gamma 1.431594E+03, time 91.528ms
+[INFO   ] DREAMPlace - full step 546.725 ms
+[INFO   ] DREAMPlace - optimizer step 430.564 ms
+[INFO   ] DREAMPlace - iteration   70, (  70,  0,  0), Obj -8.983645E+10, DensityWeight 5.237536E-09, HPWL -8.977185E+10, Overflow 8.092135E-01, MaxDensity 7.420E+03, gamma 1.428360E+03, time 88.330ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln70.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 550.802 ms
+[INFO   ] DREAMPlace - optimizer step 533.574 ms
+[INFO   ] DREAMPlace - iteration   71, (  71,  0,  0), Obj -9.475491E+10, DensityWeight 5.460503E-09, HPWL -9.472777E+10, Overflow 8.052728E-01, MaxDensity 7.098E+03, gamma 1.364409E+03, time 88.362ms
+[INFO   ] DREAMPlace - full step 632.115 ms
+[INFO   ] DREAMPlace - optimizer step 4706.977 ms
+[INFO   ] DREAMPlace - iteration   72, (  72,  0,  0), Obj -9.791545E+10, DensityWeight 5.692393E-09, HPWL -9.791713E+10, Overflow 7.998071E-01, MaxDensity 6.748E+03, gamma 1.337173E+03, time 128.242ms
+[INFO   ] DREAMPlace - full step 4847.155 ms
+[INFO   ] DREAMPlace - optimizer step 449.579 ms
+[INFO   ] DREAMPlace - iteration   73, (  73,  0,  0), Obj -8.179380E+10, DensityWeight 5.933538E-09, HPWL -8.172549E+10, Overflow 7.970930E-01, MaxDensity 6.471E+03, gamma 1.300294E+03, time 85.282ms
+[INFO   ] DREAMPlace - full step 542.615 ms
+[INFO   ] DREAMPlace - optimizer step 565.467 ms
+[INFO   ] DREAMPlace - iteration   74, (  74,  0,  0), Obj -8.285360E+10, DensityWeight 5.918703E-09, HPWL -8.274511E+10, Overflow 7.939852E-01, MaxDensity 6.211E+03, gamma 1.282361E+03, time 79.071ms
+[INFO   ] DREAMPlace - full step 652.188 ms
+[INFO   ] DREAMPlace - optimizer step 944.489 ms
+[INFO   ] DREAMPlace - iteration   75, (  75,  0,  0), Obj -8.338775E+10, DensityWeight 6.168201E-09, HPWL -8.326200E+10, Overflow 7.913985E-01, MaxDensity 5.950E+03, gamma 1.262130E+03, time 80.749ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln75.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 1054.743 ms
+[INFO   ] DREAMPlace - optimizer step 1040.381 ms
+[INFO   ] DREAMPlace - iteration   76, (  76,  0,  0), Obj -8.355033E+10, DensityWeight 6.427573E-09, HPWL -8.343493E+10, Overflow 7.894800E-01, MaxDensity 5.707E+03, gamma 1.245534E+03, time 86.970ms
+[INFO   ] DREAMPlace - full step 1135.373 ms
+[INFO   ] DREAMPlace - optimizer step 516.118 ms
+[INFO   ] DREAMPlace - iteration   77, (  77,  0,  0), Obj -8.366709E+10, DensityWeight 6.697182E-09, HPWL -8.362351E+10, Overflow 7.870932E-01, MaxDensity 5.485E+03, gamma 1.233368E+03, time 82.952ms
+[INFO   ] DREAMPlace - full step 607.502 ms
+[INFO   ] DREAMPlace - optimizer step 524.706 ms
+[INFO   ] DREAMPlace - iteration   78, (  78,  0,  0), Obj -8.505275E+10, DensityWeight 6.977402E-09, HPWL -8.497141E+10, Overflow 7.842315E-01, MaxDensity 5.274E+03, gamma 1.218396E+03, time 83.594ms
+[INFO   ] DREAMPlace - full step 616.580 ms
+[INFO   ] DREAMPlace - optimizer step 1983.431 ms
+[INFO   ] DREAMPlace - iteration   79, (  79,  0,  0), Obj -9.000634E+10, DensityWeight 7.268620E-09, HPWL -8.986074E+10, Overflow 7.828913E-01, MaxDensity 5.061E+03, gamma 1.200685E+03, time 82.772ms
+[INFO   ] DREAMPlace - full step 2074.406 ms
+[INFO   ] DREAMPlace - optimizer step 616.146 ms
+[INFO   ] DREAMPlace - iteration   80, (  80,  0,  0), Obj -9.022933E+10, DensityWeight 7.571236E-09, HPWL -9.008372E+10, Overflow 7.828866E-01, MaxDensity 4.712E+03, gamma 1.192480E+03, time 86.570ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln80.def
+ent to def/soln55.def
+[ERROR  ] unable to open def/soln55.def for write
+[INFO   ] writing placement to def/soln60.def
+[ERROR  ] unable to open def/soln60.def for write
+[INFO   ] writing placement to def/soln65.def
+[ERROR  ] unable to open def/soln65.def for write
+[INFO   ] writing placement to def/soln70.def
+[ERROR  ] unable to open def/soln70.def for write
+[INFO   ] writing placement to def/soln75.def
+[ERROR  ] unable to open def/soln75.def for write
+[INFO   ] writing placement to def/soln80.def
+[ERROR  ] [INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.032 seconds
+[INFO   ] DREAMPlace - full step 744.259 ms
+[INFO   ] DREAMPlace - optimizer step 2217.802 ms
+[INFO   ] DREAMPlace - iteration   81, (  81,  0,  0), Obj -9.024325E+10, DensityWeight 7.885662E-09, HPWL -9.010072E+10, Overflow 7.826614E-01, MaxDensity 4.336E+03, gamma 1.192451E+03, time 99.496ms
+[INFO   ] DREAMPlace - full step 2326.139 ms
+[INFO   ] DREAMPlace - optimizer step 917.861 ms
+[INFO   ] DREAMPlace - iteration   82, (  82,  0,  0), Obj -9.025286E+10, DensityWeight 8.212323E-09, HPWL -9.011484E+10, Overflow 7.826414E-01, MaxDensity 3.962E+03, gamma 1.191077E+03, time 130.014ms
+[INFO   ] DREAMPlace - full step 1056.504 ms
+[INFO   ] DREAMPlace - optimizer step 880.185 ms
+[INFO   ] DREAMPlace - iteration   83, (  83,  0,  0), Obj -9.028029E+10, DensityWeight 8.551662E-09, HPWL -9.014389E+10, Overflow 7.835432E-01, MaxDensity 3.591E+03, gamma 1.190956E+03, time 81.746ms
+[INFO   ] DREAMPlace - full step 966.749 ms
+[INFO   ] DREAMPlace - optimizer step 449.516 ms
+[INFO   ] DREAMPlace - iteration   84, (  84,  0,  0), Obj -9.028764E+10, DensityWeight 8.904132E-09, HPWL -9.015212E+10, Overflow 7.826691E-01, MaxDensity 3.234E+03, gamma 1.196464E+03, time 80.017ms
+[INFO   ] DREAMPlace - full step 534.072 ms
+[INFO   ] DREAMPlace - optimizer step 861.880 ms
+[INFO   ] DREAMPlace - iteration   85, (  85,  0,  0), Obj -9.029404E+10, DensityWeight 9.270202E-09, HPWL -9.016020E+10, Overflow 7.809232E-01, MaxDensity 2.885E+03, gamma 1.191124E+03, time 79.034ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln85.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.023 seconds
+[INFO   ] DREAMPlace - full step 971.138 ms
+[INFO   ] DREAMPlace - optimizer step 860.370 ms
+[INFO   ] DREAMPlace - iteration   86, (  86,  0,  0), Obj -9.030300E+10, DensityWeight 9.650357E-09, HPWL -9.016868E+10, Overflow 7.788544E-01, MaxDensity 2.535E+03, gamma 1.180531E+03, time 78.922ms
+[INFO   ] DREAMPlace - full step 946.084 ms
+[INFO   ] DREAMPlace - optimizer step 2952.833 ms
+[INFO   ] DREAMPlace - iteration   87, (  87,  0,  0), Obj -9.031135E+10, DensityWeight 1.004510E-08, HPWL -9.017491E+10, Overflow 7.772889E-01, MaxDensity 2.222E+03, gamma 1.168100E+03, time 79.913ms
+[INFO   ] DREAMPlace - full step 3039.904 ms
+[INFO   ] DREAMPlace - optimizer step 448.994 ms
+[INFO   ] DREAMPlace - iteration   88, (  88,  0,  0), Obj -9.031886E+10, DensityWeight 1.045494E-08, HPWL -9.017922E+10, Overflow 7.752661E-01, MaxDensity 1.952E+03, gamma 1.158780E+03, time 84.749ms
+[INFO   ] DREAMPlace - full step 541.234 ms
+[INFO   ] DREAMPlace - optimizer step 441.104 ms
+[INFO   ] DREAMPlace - iteration   89, (  89,  0,  0), Obj -9.032609E+10, DensityWeight 1.088041E-08, HPWL -9.018458E+10, Overflow 7.727603E-01, MaxDensity 1.700E+03, gamma 1.146848E+03, time 81.999ms
+[INFO   ] DREAMPlace - full step 529.974 ms
+[INFO   ] DREAMPlace - optimizer step 878.351 ms
+[INFO   ] DREAMPlace - iteration   90, (  90,  0,  0), Obj -9.034234E+10, DensityWeight 1.132207E-08, HPWL -9.019869E+10, Overflow 7.704294E-01, MaxDensity 1.470E+03, gamma 1.132238E+03, time 78.818ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln90.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 988.318 ms
+[INFO   ] DREAMPlace - optimizer step 977.775 ms
+[INFO   ] DREAMPlace - iteration   91, (  91,  0,  0), Obj -9.035061E+10, DensityWeight 1.178048E-08, HPWL -9.020614E+10, Overflow 7.671506E-01, MaxDensity 1.251E+03, gamma 1.118814E+03, time 80.759ms
+[INFO   ] DREAMPlace - full step 1067.954 ms
+[INFO   ] DREAMPlace - optimizer step 921.681 ms
+[INFO   ] DREAMPlace - iteration   92, (  92,  0,  0), Obj -9.035794E+10, DensityWeight 1.225622E-08, HPWL -9.021275E+10, Overflow 7.634139E-01, MaxDensity 1.060E+03, gamma 1.100200E+03, time 118.307ms
+[INFO   ] DREAMPlace - full step 1057.686 ms
+[INFO   ] DREAMPlace - optimizer step 1455.568 ms
+[INFO   ] DREAMPlace - iteration   93, (  93,  0,  0), Obj -9.036475E+10, DensityWeight 1.274989E-08, HPWL -9.021726E+10, Overflow 7.605224E-01, MaxDensity 8.971E+02, gamma 1.079364E+03, time 92.240ms
+[INFO   ] DREAMPlace - full step 1556.371 ms
+[INFO   ] DREAMPlace - optimizer step 622.653 ms
+[INFO   ] DREAMPlace - iteration   94, (  94,  0,  0), Obj -9.037164E+10, DensityWeight 1.326213E-08, HPWL -9.022130E+10, Overflow 7.589127E-01, MaxDensity 7.664E+02, gamma 1.063512E+03, time 82.640ms
+[INFO   ] DREAMPlace - full step 712.065 ms
+[INFO   ] DREAMPlace - optimizer step 1013.045 ms
+[INFO   ] DREAMPlace - iteration   95, (  95,  0,  0), Obj -9.037726E+10, DensityWeight 1.379357E-08, HPWL -9.022489E+10, Overflow 7.573109E-01, MaxDensity 6.705E+02, gamma 1.054788E+03, time 86.796ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln95.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.023 seconds
+[INFO   ] DREAMPlace - full step 1130.306 ms
+[INFO   ] DREAMPlace - optimizer step 1448.750 ms
+[INFO   ] DREAMPlace - iteration   96, (  96,  0,  0), Obj -9.038292E+10, DensityWeight 1.434487E-08, HPWL -9.023092E+10, Overflow 7.561084E-01, MaxDensity 6.148E+02, gamma 1.046178E+03, time 78.907ms
+[INFO   ] DREAMPlace - full step 1535.671 ms
+[INFO   ] DREAMPlace - optimizer step 1451.589 ms
+[INFO   ] DREAMPlace - iteration   97, (  97,  0,  0), Obj -9.038697E+10, DensityWeight 1.491671E-08, HPWL -9.023402E+10, Overflow 7.536882E-01, MaxDensity 5.482E+02, gamma 1.039761E+03, time 88.143ms
+[INFO   ] DREAMPlace - full step 1547.412 ms
+[INFO   ] DREAMPlace - optimizer step 446.858 ms
+[INFO   ] DREAMPlace - iteration   98, (  98,  0,  0), Obj -9.038159E+10, DensityWeight 1.550979E-08, HPWL -9.022710E+10, Overflow 7.508620E-01, MaxDensity 4.841E+02, gamma 1.026964E+03, time 83.180ms
+[INFO   ] DREAMPlace - full step 537.347 ms
+[INFO   ] DREAMPlace - optimizer step 438.404 ms
+[INFO   ] DREAMPlace - iteration   99, (  99,  0,  0), Obj -9.039366E+10, DensityWeight 1.547101E-08, HPWL -9.023796E+10, Overflow 7.478048E-01, MaxDensity 4.480E+02, gamma 1.012220E+03, time 81.234ms
+[INFO   ] DREAMPlace - full step 526.615 ms
+unable to open def/soln80.def for write
+[INFO   ] writing placement to def/soln85.def
+[ERROR  ] unable to open def/soln85.def for write
+[INFO   ] writing placement to def/soln90.def
+[ERROR  ] unable to open def/soln90.def for write
+[INFO   ] writing placement to def/soln95.def
+[ERROR  ] unable to open def/soln95.def for write
+[INFO   ] writing placement to results/superblue4/plot/iter0100.png
+[WARNING] filename = results/superblue4/plot/iter0100.png, width = 800, height = 445, file format = 3 not used, as D[I] plotting to results/superblue4/plot/iter0100.png takes 10.846 seconds
+[INFO   ] DREAMPlace - plotting to results/superblue4/plot/iter0100.png takes 10.870 seconds
+[INFO   ] DREAMPlace - optimizer step 468.327 ms
+[INFO   ] DREAMPlace - iteration  100, ( 100,  0,  0), Obj -9.043218E+10, DensityWeight 1.608292E-08, HPWL -9.027334E+10, Overflow 7.433606E-01, MaxDensity 4.108E+02, gamma 9.965082E+02, time 78.530ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln100.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 11449.919 ms
+[INFO   ] DREAMPlace - optimizer step 946.329 ms
+[INFO   ] DREAMPlace - iteration  101, ( 101,  0,  0), Obj -9.043630E+10, DensityWeight 1.671736E-08, HPWL -9.027712E+10, Overflow 7.401632E-01, MaxDensity 3.859E+02, gamma 9.741031E+02, time 77.636ms
+[INFO   ] DREAMPlace - full step 1030.979 ms
+[INFO   ] DREAMPlace - optimizer step 1359.646 ms
+[INFO   ] DREAMPlace - iteration  102, ( 102,  0,  0), Obj -9.044197E+10, DensityWeight 1.737509E-08, HPWL -9.028427E+10, Overflow 7.386539E-01, MaxDensity 3.678E+02, gamma 9.582959E+02, time 81.331ms
+[INFO   ] DREAMPlace - full step 1447.735 ms
+[INFO   ] DREAMPlace - optimizer step 478.443 ms
+[INFO   ] DREAMPlace - iteration  103, ( 103,  0,  0), Obj -8.807476E+10, DensityWeight 1.805688E-08, HPWL -8.790095E+10, Overflow 7.399602E-01, MaxDensity 3.477E+02, gamma 9.509235E+02, time 96.642ms
+[INFO   ] DREAMPlace - full step 579.640 ms
+[INFO   ] DREAMPlace - optimizer step 935.138 ms
+[INFO   ] DREAMPlace - iteration  104, ( 104,  0,  0), Obj -8.814710E+10, DensityWeight 1.801174E-08, HPWL -8.796991E+10, Overflow 7.367890E-01, MaxDensity 3.222E+02, gamma 9.573010E+02, time 80.070ms
+[INFO   ] DREAMPlace - full step 1021.996 ms
+[INFO   ] DREAMPlace - optimizer step 494.504 ms
+[INFO   ] DREAMPlace - iteration  105, ( 105,  0,  0), Obj -8.824995E+10, DensityWeight 1.871478E-08, HPWL -8.813538E+10, Overflow 7.323320E-01, MaxDensity 2.947E+02, gamma 9.418923E+02, time 91.612ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln105.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 616.686 ms
+[INFO   ] DREAMPlace - optimizer step 468.693 ms
+[INFO   ] DREAMPlace - iteration  106, ( 106,  0,  0), Obj -9.273355E+10, DensityWeight 1.944331E-08, HPWL -9.254653E+10, Overflow 7.298402E-01, MaxDensity 2.726E+02, gamma 9.206548E+02, time 83.914ms
+[INFO   ] DREAMPlace - full step 561.260 ms
+[INFO   ] DREAMPlace - optimizer step 1341.224 ms
+[INFO   ] DREAMPlace - iteration  107, ( 107,  0,  0), Obj -9.508655E+10, DensityWeight 2.019818E-08, HPWL -9.489444E+10, Overflow 7.280626E-01, MaxDensity 2.534E+02, gamma 9.089907E+02, time 80.409ms
+[INFO   ] DREAMPlace - full step 1428.396 ms
+[INFO   ] DREAMPlace - optimizer step 2327.833 ms
+[INFO   ] DREAMPlace - iteration  108, ( 108,  0,  0), Obj -9.512789E+10, DensityWeight 2.098027E-08, HPWL -9.493672E+10, Overflow 7.308335E-01, MaxDensity 2.625E+02, gamma 9.007607E+02, time 81.168ms
+[INFO   ] DREAMPlace - full step 2413.420 ms
+[INFO   ] DREAMPlace - optimizer step 536.390 ms
+[INFO   ] DREAMPlace - iteration  109, ( 109,  0,  0), Obj -7.995170E+10, DensityWeight 2.179045E-08, HPWL -7.981384E+10, Overflow 7.298462E-01, MaxDensity 2.602E+02, gamma 9.136229E+02, time 87.709ms
+[INFO   ] DREAMPlace - full step 628.994 ms
+[INFO   ] DREAMPlace - optimizer step 1045.466 ms
+[INFO   ] DREAMPlace - iteration  110, ( 110,  0,  0), Obj -8.205648E+10, DensityWeight 2.173598E-08, HPWL -8.189151E+10, Overflow 7.230919E-01, MaxDensity 2.598E+02, gamma 9.090187E+02, time 103.161ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln110.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.029 seconds
+[INFO   ] DREAMPlace - full step 1186.022 ms
+[INFO   ] DREAMPlace - optimizer step 464.977 ms
+[INFO   ] DREAMPlace - iteration  111, ( 111,  0,  0), Obj -8.338254E+10, DensityWeight 2.257083E-08, HPWL -8.327416E+10, Overflow 7.199498E-01, MaxDensity 2.592E+02, gamma 8.781392E+02, time 88.111ms
+[INFO   ] DREAMPlace - full step 561.255 ms
+[INFO   ] DREAMPlace - optimizer step 503.167 ms
+[INFO   ] DREAMPlace - iteration  112, ( 112,  0,  0), Obj -8.759536E+10, DensityWeight 2.343541E-08, HPWL -8.742050E+10, Overflow 7.163326E-01, MaxDensity 2.541E+02, gamma 8.641337E+02, time 90.671ms
+[INFO   ] DREAMPlace - full step 600.492 ms
+[INFO   ] DREAMPlace - optimizer step 470.305 ms
+[INFO   ] DREAMPlace - iteration  113, ( 113,  0,  0), Obj -9.013195E+10, DensityWeight 2.433067E-08, HPWL -8.995416E+10, Overflow 7.143364E-01, MaxDensity 2.474E+02, gamma 8.482867E+02, time 89.509ms
+[INFO   ] DREAMPlace - full step 568.373 ms
+[INFO   ] DREAMPlace - optimizer step 1443.897 ms
+[INFO   ] DREAMPlace - iteration  114, ( 114,  0,  0), Obj -9.024897E+10, DensityWeight 2.525760E-08, HPWL -9.006839E+10, Overflow 7.151891E-01, MaxDensity 2.486E+02, gamma 8.396661E+02, time 90.937ms
+[INFO   ] DREAMPlace - full step 1539.150 ms
+[INFO   ] DREAMPlace - optimizer step 1473.022 ms
+[INFO   ] DREAMPlace - iteration  115, ( 115,  0,  0), Obj -9.028079E+10, DensityWeight 2.621723E-08, HPWL -9.008526E+10, Overflow 7.125285E-01, MaxDensity 2.347E+02, gamma 8.433378E+02, time 80.196ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln115.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 1584.845 ms
+[INFO   ] DREAMPlace - optimizer step 966.626 ms
+[INFO   ] DREAMPlace - iteration  116, ( 116,  0,  0), Obj -9.029469E+10, DensityWeight 2.721059E-08, HPWL -9.008212E+10, Overflow 7.082698E-01, MaxDensity 2.255E+02, gamma 8.319346E+02, time 82.964ms
+[INFO   ] DREAMPlace - full step 1056.488 ms
+[INFO   ] DREAMPlace - optimizer step 933.271 ms
+[INFO   ] DREAMPlace - iteration  117, ( 117,  0,  0), Obj -9.031593E+10, DensityWeight 2.714256E-08, HPWL -9.009973E+10, Overflow 7.058157E-01, MaxDensity 1.988E+02, gamma 8.140019E+02, time 92.747ms
+[INFO   ] DREAMPlace - full step 1032.832 ms
+[INFO   ] DREAMPlace - optimizer step 487.278 ms
+[INFO   ] DREAMPlace - iteration  118, ( 118,  0,  0), Obj -9.033966E+10, DensityWeight 2.816535E-08, HPWL -9.013917E+10, Overflow 7.043083E-01, MaxDensity 1.809E+02, gamma 8.038441E+02, time 87.354ms
+[INFO   ] DREAMPlace - full step 581.359 ms
+[INFO   ] DREAMPlace - optimizer step 1011.957 ms
+[INFO   ] DREAMPlace - iteration  119, ( 119,  0,  0), Obj -9.034099E+10, DensityWeight 2.922376E-08, HPWL -9.013502E+10, Overflow 7.004288E-01, MaxDensity 1.683E+02, gamma 7.976675E+02, time 93.336ms
+[INFO   ] DREAMPlace - full step 1113.843 ms
+[INFO   ] DREAMPlace - optimizer step 452.199 ms
+[INFO   ] DREAMPlace - iteration  120, ( 120,  0,  0), Obj -9.035316E+10, DensityWeight 2.915070E-08, HPWL -9.015638E+10, Overflow 6.966434E-01, MaxDensity 1.706E+02, gamma 7.819895E+02, time 89.020ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln120.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.022 seconds
+[INFO   ] DREAMPlace - full step 570.999 ms
+[INFO   ] DREAMPlace - optimizer step 941.453 ms
+[INFO   ] DREAMPlace - iteration  121, ( 121,  0,  0), Obj -9.035416E+10, DensityWeight 3.024009E-08, HPWL -9.015389E+10, Overflow 6.935490E-01, MaxDensity 1.722E+02, gamma 7.669886E+02, time 78.567ms
+[INFO   ] DREAMPlace - full step 1026.789 ms
+[INFO   ] DREAMPlace - optimizer step 1002.118 ms
+[INFO   ] DREAMPlace - iteration  122, ( 122,  0,  0), Obj -9.036394E+10, DensityWeight 3.016449E-08, HPWL -9.017386E+10, Overflow 6.906245E-01, MaxDensity 1.732E+02, gamma 7.549402E+02, time 77.666ms
+[INFO   ] DREAMPlace - full step 1086.717 ms
+[INFO   ] DREAMPlace - optimizer step 473.130 ms
+[INFO   ] DREAMPlace - iteration  123, ( 123,  0,  0), Obj -9.036936E+10, DensityWeight 3.128551E-08, HPWL -9.018448E+10, Overflow 6.880033E-01, MaxDensity 1.744E+02, gamma 7.437267E+02, time 82.455ms
+[INFO   ] DREAMPlace - full step 562.541 ms
+[INFO   ] DREAMPlace - optimizer step 983.689 ms
+[INFO   ] DREAMPlace - iteration  124, ( 124,  0,  0), Obj -9.037069E+10, DensityWeight 3.244494E-08, HPWL -9.018416E+10, Overflow 6.855351E-01, MaxDensity 1.754E+02, gamma 7.338184E+02, time 80.601ms
+[INFO   ] DREAMPlace - full step 1072.954 ms
+[INFO   ] DREAMPlace - optimizer step 950.590 ms
+[INFO   ] DREAMPlace - iteration  125, ( 125,  0,  0), Obj -9.037217E+10, DensityWeight 3.258324E-08, HPWL -9.018515E+10, Overflow 6.828003E-01, MaxDensity 1.762E+02, gamma 7.246089E+02, time 93.911ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln125.def
+RAWPLACE not enabled
+[INFO   ] writing placement to def/soln100.def
+[ERROR  ] unable to open def/soln100.def for write
+[INFO   ] writing placement to def/soln105.def
+[ERROR  ] unable to open def/soln105.def for write
+[INFO   ] writing placement to def/soln110.def
+[ERROR  ] unable to open def/soln110.def for write
+[INFO   ] writing placement to def/soln115.def
+[ERROR  ] unable to open def/soln115.def for write
+[INFO   ] writing placement to def/soln120.def
+[ERROR  ] unable to open def/soln120.def for write
+[[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 1075.625 ms
+[INFO   ] DREAMPlace - optimizer step 944.532 ms
+[INFO   ] DREAMPlace - iteration  126, ( 126,  0,  0), Obj -9.037429E+10, DensityWeight 3.378400E-08, HPWL -9.018791E+10, Overflow 6.806679E-01, MaxDensity 1.770E+02, gamma 7.145399E+02, time 86.523ms
+[INFO   ] DREAMPlace - full step 1038.043 ms
+[INFO   ] DREAMPlace - optimizer step 500.937 ms
+[INFO   ] DREAMPlace - iteration  127, ( 127,  0,  0), Obj -9.037679E+10, DensityWeight 3.502552E-08, HPWL -9.019236E+10, Overflow 6.783844E-01, MaxDensity 1.802E+02, gamma 7.067858E+02, time 87.864ms
+[INFO   ] DREAMPlace - full step 596.239 ms
+[INFO   ] DREAMPlace - optimizer step 450.002 ms
+[INFO   ] DREAMPlace - iteration  128, ( 128,  0,  0), Obj -9.037702E+10, DensityWeight 3.630903E-08, HPWL -9.019166E+10, Overflow 6.758226E-01, MaxDensity 1.831E+02, gamma 6.985756E+02, time 86.666ms
+[INFO   ] DREAMPlace - full step 543.542 ms
+[INFO   ] DREAMPlace - optimizer step 459.357 ms
+[INFO   ] DREAMPlace - iteration  129, ( 129,  0,  0), Obj -9.037836E+10, DensityWeight 3.621825E-08, HPWL -9.019404E+10, Overflow 6.742477E-01, MaxDensity 1.844E+02, gamma 6.894781E+02, time 84.983ms
+[INFO   ] DREAMPlace - full step 551.180 ms
+[INFO   ] DREAMPlace - optimizer step 475.992 ms
+[INFO   ] DREAMPlace - iteration  130, ( 130,  0,  0), Obj -9.038150E+10, DensityWeight 3.753796E-08, HPWL -9.020046E+10, Overflow 6.729556E-01, MaxDensity 1.839E+02, gamma 6.839445E+02, time 82.515ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln130.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.026 seconds
+[INFO   ] DREAMPlace - full step 592.288 ms
+[INFO   ] DREAMPlace - optimizer step 497.716 ms
+[INFO   ] DREAMPlace - iteration  131, ( 131,  0,  0), Obj -9.038412E+10, DensityWeight 3.890187E-08, HPWL -9.020618E+10, Overflow 6.722001E-01, MaxDensity 1.833E+02, gamma 6.794374E+02, time 88.834ms
+[INFO   ] DREAMPlace - full step 597.017 ms
+[INFO   ] DREAMPlace - optimizer step 508.796 ms
+[INFO   ] DREAMPlace - iteration  132, ( 132,  0,  0), Obj -9.038571E+10, DensityWeight 4.031130E-08, HPWL -9.020930E+10, Overflow 6.711476E-01, MaxDensity 1.833E+02, gamma 6.768156E+02, time 90.548ms
+[INFO   ] DREAMPlace - full step 606.158 ms
+[INFO   ] DREAMPlace - optimizer step 515.895 ms
+[INFO   ] DREAMPlace - iteration  133, ( 133,  0,  0), Obj -9.038692E+10, DensityWeight 4.176761E-08, HPWL -9.021149E+10, Overflow 6.703376E-01, MaxDensity 1.827E+02, gamma 6.731808E+02, time 88.835ms
+[INFO   ] DREAMPlace - full step 613.820 ms
+[INFO   ] DREAMPlace - optimizer step 961.438 ms
+[INFO   ] DREAMPlace - iteration  134, ( 134,  0,  0), Obj -9.038823E+10, DensityWeight 4.327221E-08, HPWL -9.021407E+10, Overflow 6.703305E-01, MaxDensity 1.834E+02, gamma 6.703961E+02, time 92.419ms
+[INFO   ] DREAMPlace - full step 1060.605 ms
+[INFO   ] DREAMPlace - optimizer step 478.242 ms
+[INFO   ] DREAMPlace - iteration  135, ( 135,  0,  0), Obj -9.039347E+10, DensityWeight 4.482653E-08, HPWL -9.022667E+10, Overflow 6.701788E-01, MaxDensity 1.835E+02, gamma 6.703721E+02, time 82.135ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln135.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.026 seconds
+[INFO   ] DREAMPlace - full step 592.896 ms
+[INFO   ] DREAMPlace - optimizer step 1006.592 ms
+[INFO   ] DREAMPlace - iteration  136, ( 136,  0,  0), Obj -9.040484E+10, DensityWeight 4.643204E-08, HPWL -9.024225E+10, Overflow 6.690392E-01, MaxDensity 1.837E+02, gamma 6.698516E+02, time 87.332ms
+[INFO   ] DREAMPlace - full step 1106.012 ms
+[INFO   ] DREAMPlace - optimizer step 1008.755 ms
+[INFO   ] DREAMPlace - iteration  137, ( 137,  0,  0), Obj -9.040420E+10, DensityWeight 4.809023E-08, HPWL -9.023821E+10, Overflow 6.677365E-01, MaxDensity 1.840E+02, gamma 6.659570E+02, time 92.459ms
+[INFO   ] DREAMPlace - full step 1110.091 ms
+[INFO   ] DREAMPlace - optimizer step 1039.605 ms
+[INFO   ] DREAMPlace - iteration  138, ( 138,  0,  0), Obj -9.040460E+10, DensityWeight 4.797000E-08, HPWL -9.023835E+10, Overflow 6.664426E-01, MaxDensity 1.851E+02, gamma 6.615329E+02, time 101.470ms
+[INFO   ] DREAMPlace - full step 1149.036 ms
+[INFO   ] DREAMPlace - optimizer step 615.834 ms
+[INFO   ] DREAMPlace - iteration  139, ( 139,  0,  0), Obj -9.040513E+10, DensityWeight 4.967319E-08, HPWL -9.023903E+10, Overflow 6.654183E-01, MaxDensity 1.863E+02, gamma 6.571672E+02, time 108.234ms
+[INFO   ] DREAMPlace - full step 732.256 ms
+[INFO   ] DREAMPlace - optimizer step 619.922 ms
+[INFO   ] DREAMPlace - iteration  140, ( 140,  0,  0), Obj -9.040451E+10, DensityWeight 5.143171E-08, HPWL -9.023670E+10, Overflow 6.642454E-01, MaxDensity 1.863E+02, gamma 6.537319E+02, time 101.360ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln140.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 754.646 ms
+[INFO   ] DREAMPlace - optimizer step 567.994 ms
+[INFO   ] DREAMPlace - iteration  141, ( 141,  0,  0), Obj -9.040513E+10, DensityWeight 5.130313E-08, HPWL -9.023749E+10, Overflow 6.638840E-01, MaxDensity 1.863E+02, gamma 6.498202E+02, time 101.032ms
+[INFO   ] DREAMPlace - full step 679.351 ms
+[INFO   ] DREAMPlace - optimizer step 538.805 ms
+[INFO   ] DREAMPlace - iteration  142, ( 142,  0,  0), Obj -9.040691E+10, DensityWeight 5.310872E-08, HPWL -9.024129E+10, Overflow 6.637675E-01, MaxDensity 1.859E+02, gamma 6.486198E+02, time 92.479ms
+[INFO   ] DREAMPlace - full step 640.234 ms
+[INFO   ] DREAMPlace - optimizer step 522.283 ms
+[INFO   ] DREAMPlace - iteration  143, ( 143,  0,  0), Obj -9.040827E+10, DensityWeight 5.497237E-08, HPWL -9.024420E+10, Overflow 6.645298E-01, MaxDensity 1.858E+02, gamma 6.482334E+02, time 99.924ms
+[INFO   ] DREAMPlace - full step 628.529 ms
+[INFO   ] DREAMPlace - optimizer step 601.138 ms
+[INFO   ] DREAMPlace - iteration  144, ( 144,  0,  0), Obj -9.040897E+10, DensityWeight 5.689572E-08, HPWL -9.024512E+10, Overflow 6.651372E-01, MaxDensity 1.857E+02, gamma 6.507667E+02, time 97.843ms
+[INFO   ] DREAMPlace - full step 704.042 ms
+[INFO   ] DREAMPlace - optimizer step 638.304 ms
+[INFO   ] DREAMPlace - iteration  145, ( 145,  0,  0), Obj -9.040960E+10, DensityWeight 5.888047E-08, HPWL -9.024563E+10, Overflow 6.659782E-01, MaxDensity 1.862E+02, gamma 6.527924E+02, time 105.737ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln145.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 774.966 ms
+[INFO   ] DREAMPlace - optimizer step 475.115 ms
+[INFO   ] DREAMPlace - iteration  146, ( 146,  0,  0), Obj -9.041060E+10, DensityWeight 6.092837E-08, HPWL -9.024700E+10, Overflow 6.663994E-01, MaxDensity 1.870E+02, gamma 6.556075E+02, time 102.233ms
+[INFO   ] DREAMPlace - full step 583.111 ms
+[INFO   ] DREAMPlace - optimizer step 447.642 ms
+[INFO   ] DREAMPlace - iteration  147, ( 147,  0,  0), Obj -9.041175E+10, DensityWeight 6.304119E-08, HPWL -9.024892E+10, Overflow 6.664681E-01, MaxDensity 1.872E+02, gamma 6.570220E+02, time 81.209ms
+[INFO   ] DREAMPlace - full step 533.506 ms
+[INFO   ] DREAMPlace - optimizer step 433.928 ms
+[INFO   ] DREAMPlace - iteration  148, ( 148,  0,  0), Obj -9.041263E+10, DensityWeight 6.522076E-08, HPWL -9.025024E+10, Overflow 6.667051E-01, MaxDensity 1.874E+02, gamma 6.572531E+02, time 81.474ms
+[INFO   ] DREAMPlace - full step 519.824 ms
+[INFO   ] DREAMPlace - optimizer step 434.446 ms
+[INFO   ] DREAMPlace - iteration  149, ( 149,  0,  0), Obj -9.041318E+10, DensityWeight 6.746893E-08, HPWL -9.025095E+10, Overflow 6.669745E-01, MaxDensity 1.874E+02, gamma 6.580507E+02, time 78.990ms
+[INFO   ] DREAMPlace - full step 517.957 ms
+[INFO   ] DREAMPlace - optimizer step 472.370 ms
+[INFO   ] DREAMPlace - iteration  150, ( 150,  0,  0), Obj -9.041373E+10, DensityWeight 6.978762E-08, HPWL -9.025152E+10, Overflow 6.668167E-01, MaxDensity 1.876E+02, gamma 6.589584E+02, time 77.936ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln150.def
+INFO   ] writing placement to def/soln125.def
+[ERROR  ] unable to open def/soln125.def for write
+[INFO   ] writing placement to def/soln130.def
+[ERROR  ] unable to open def/soln130.def for write
+[INFO   ] writing placement to def/soln135.def
+[ERROR  ] unable to open def/soln135.def for write
+[INFO   ] writing placement to def/soln140.def
+[ERROR  ] unable to open def/soln140.def for write
+[INFO   ] writing placement to def/soln145.def
+[ERROR  ] unable to open def/soln145.def for write
+[INFO   ] writing place[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.023 seconds
+[INFO   ] DREAMPlace - full step 578.414 ms
+[INFO   ] DREAMPlace - optimizer step 473.284 ms
+[INFO   ] DREAMPlace - iteration  151, ( 151,  0,  0), Obj -9.041441E+10, DensityWeight 7.217878E-08, HPWL -9.025271E+10, Overflow 6.665750E-01, MaxDensity 1.876E+02, gamma 6.584265E+02, time 82.820ms
+[INFO   ] DREAMPlace - full step 560.787 ms
+[INFO   ] DREAMPlace - optimizer step 468.355 ms
+[INFO   ] DREAMPlace - iteration  152, ( 152,  0,  0), Obj -9.041508E+10, DensityWeight 7.464440E-08, HPWL -9.025396E+10, Overflow 6.663737E-01, MaxDensity 1.877E+02, gamma 6.576129E+02, time 84.648ms
+[INFO   ] DREAMPlace - full step 557.503 ms
+[INFO   ] DREAMPlace - optimizer step 519.272 ms
+[INFO   ] DREAMPlace - iteration  153, ( 153,  0,  0), Obj -9.041558E+10, DensityWeight 7.718652E-08, HPWL -9.025498E+10, Overflow 6.661087E-01, MaxDensity 1.878E+02, gamma 6.569357E+02, time 86.667ms
+[INFO   ] DREAMPlace - full step 610.260 ms
+[INFO   ] DREAMPlace - optimizer step 545.198 ms
+[INFO   ] DREAMPlace - iteration  154, ( 154,  0,  0), Obj -9.041599E+10, DensityWeight 7.980724E-08, HPWL -9.025570E+10, Overflow 6.659956E-01, MaxDensity 1.878E+02, gamma 6.560456E+02, time 81.501ms
+[INFO   ] DREAMPlace - full step 631.321 ms
+[INFO   ] DREAMPlace - optimizer step 482.764 ms
+[INFO   ] DREAMPlace - iteration  155, ( 155,  0,  0), Obj -9.041639E+10, DensityWeight 8.250869E-08, HPWL -9.025652E+10, Overflow 6.658587E-01, MaxDensity 1.880E+02, gamma 6.556661E+02, time 90.541ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln155.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 603.113 ms
+[INFO   ] DREAMPlace - optimizer step 485.235 ms
+[INFO   ] DREAMPlace - iteration  156, ( 156,  0,  0), Obj -9.041684E+10, DensityWeight 8.529305E-08, HPWL -9.025738E+10, Overflow 6.661004E-01, MaxDensity 1.881E+02, gamma 6.552068E+02, time 88.473ms
+[INFO   ] DREAMPlace - full step 580.279 ms
+[INFO   ] DREAMPlace - optimizer step 505.893 ms
+[INFO   ] DREAMPlace - iteration  157, ( 157,  0,  0), Obj -9.041728E+10, DensityWeight 8.816256E-08, HPWL -9.025832E+10, Overflow 6.664086E-01, MaxDensity 1.882E+02, gamma 6.560178E+02, time 84.246ms
+[INFO   ] DREAMPlace - full step 595.476 ms
+[INFO   ] DREAMPlace - optimizer step 527.807 ms
+[INFO   ] DREAMPlace - iteration  158, ( 158,  0,  0), Obj -9.041770E+10, DensityWeight 9.111949E-08, HPWL -9.025902E+10, Overflow 6.671963E-01, MaxDensity 1.885E+02, gamma 6.570530E+02, time 118.799ms
+[INFO   ] DREAMPlace - full step 651.862 ms
+[INFO   ] DREAMPlace - optimizer step 508.580 ms
+[INFO   ] DREAMPlace - iteration  159, ( 159,  0,  0), Obj -9.041811E+10, DensityWeight 9.416618E-08, HPWL -9.025975E+10, Overflow 6.676877E-01, MaxDensity 1.891E+02, gamma 6.597069E+02, time 94.574ms
+[INFO   ] DREAMPlace - full step 607.781 ms
+[INFO   ] DREAMPlace - optimizer step 501.561 ms
+[INFO   ] DREAMPlace - iteration  160, ( 160,  0,  0), Obj -9.041856E+10, DensityWeight 9.730500E-08, HPWL -9.026037E+10, Overflow 6.680205E-01, MaxDensity 1.900E+02, gamma 6.613673E+02, time 83.337ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln160.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.024 seconds
+[INFO   ] DREAMPlace - full step 614.058 ms
+[INFO   ] DREAMPlace - optimizer step 451.737 ms
+[INFO   ] DREAMPlace - iteration  161, ( 161,  0,  0), Obj -9.041898E+10, DensityWeight 1.005384E-07, HPWL -9.026111E+10, Overflow 6.684396E-01, MaxDensity 1.904E+02, gamma 6.624949E+02, time 80.116ms
+[INFO   ] DREAMPlace - full step 538.958 ms
+[INFO   ] DREAMPlace - optimizer step 505.419 ms
+[INFO   ] DREAMPlace - iteration  162, ( 162,  0,  0), Obj -9.041938E+10, DensityWeight 1.038688E-07, HPWL -9.026172E+10, Overflow 6.688401E-01, MaxDensity 1.905E+02, gamma 6.639169E+02, time 85.045ms
+[INFO   ] DREAMPlace - full step 594.990 ms
+[INFO   ] DREAMPlace - optimizer step 468.562 ms
+[INFO   ] DREAMPlace - iteration  163, ( 163,  0,  0), Obj -9.041974E+10, DensityWeight 1.072989E-07, HPWL -9.026227E+10, Overflow 6.691158E-01, MaxDensity 1.906E+02, gamma 6.652788E+02, time 81.390ms
+[INFO   ] DREAMPlace - full step 556.948 ms
+[INFO   ] DREAMPlace - optimizer step 491.473 ms
+[INFO   ] DREAMPlace - iteration  164, ( 164,  0,  0), Obj -9.042010E+10, DensityWeight 1.108311E-07, HPWL -9.026273E+10, Overflow 6.692285E-01, MaxDensity 1.908E+02, gamma 6.662180E+02, time 86.591ms
+[INFO   ] DREAMPlace - full step 582.608 ms
+[INFO   ] DREAMPlace - optimizer step 486.506 ms
+[INFO   ] DREAMPlace - iteration  165, ( 165,  0,  0), Obj -9.042043E+10, DensityWeight 1.144682E-07, HPWL -9.026329E+10, Overflow 6.694689E-01, MaxDensity 1.910E+02, gamma 6.666025E+02, time 84.775ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln165.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 600.815 ms
+[INFO   ] DREAMPlace - optimizer step 464.646 ms
+[INFO   ] DREAMPlace - iteration  166, ( 166,  0,  0), Obj -9.042074E+10, DensityWeight 1.182128E-07, HPWL -9.026371E+10, Overflow 6.697513E-01, MaxDensity 1.913E+02, gamma 6.674229E+02, time 80.803ms
+[INFO   ] DREAMPlace - full step 550.066 ms
+[INFO   ] DREAMPlace - optimizer step 481.119 ms
+[INFO   ] DREAMPlace - iteration  167, ( 167,  0,  0), Obj -9.042102E+10, DensityWeight 1.220677E-07, HPWL -9.026413E+10, Overflow 6.700169E-01, MaxDensity 1.915E+02, gamma 6.683879E+02, time 95.475ms
+[INFO   ] DREAMPlace - full step 581.196 ms
+[INFO   ] DREAMPlace - optimizer step 497.077 ms
+[INFO   ] DREAMPlace - iteration  168, ( 168,  0,  0), Obj -9.042129E+10, DensityWeight 1.260357E-07, HPWL -9.026448E+10, Overflow 6.706814E-01, MaxDensity 1.919E+02, gamma 6.692971E+02, time 82.836ms
+[INFO   ] DREAMPlace - full step 584.378 ms
+[INFO   ] DREAMPlace - optimizer step 443.321 ms
+[INFO   ] DREAMPlace - iteration  169, ( 169,  0,  0), Obj -9.042158E+10, DensityWeight 1.301196E-07, HPWL -9.026496E+10, Overflow 6.711492E-01, MaxDensity 1.919E+02, gamma 6.715766E+02, time 88.470ms
+[INFO   ] DREAMPlace - full step 537.437 ms
+[INFO   ] DREAMPlace - optimizer step 477.697 ms
+[INFO   ] DREAMPlace - iteration  170, ( 170,  0,  0), Obj -9.042191E+10, DensityWeight 1.343225E-07, HPWL -9.026540E+10, Overflow 6.711236E-01, MaxDensity 1.918E+02, gamma 6.731860E+02, time 91.372ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln170.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 599.828 ms
+[INFO   ] DREAMPlace - optimizer step 501.333 ms
+[INFO   ] DREAMPlace - iteration  171, ( 171,  0,  0), Obj -9.042218E+10, DensityWeight 1.386472E-07, HPWL -9.026577E+10, Overflow 6.712855E-01, MaxDensity 1.920E+02, gamma 6.730978E+02, time 93.129ms
+[INFO   ] DREAMPlace - full step 599.132 ms
+[INFO   ] DREAMPlace - optimizer step 522.564 ms
+[INFO   ] DREAMPlace - iteration  172, ( 172,  0,  0), Obj -9.042236E+10, DensityWeight 1.430969E-07, HPWL -9.026603E+10, Overflow 6.713713E-01, MaxDensity 1.922E+02, gamma 6.736555E+02, time 86.914ms
+[INFO   ] DREAMPlace - full step 614.137 ms
+[INFO   ] DREAMPlace - optimizer step 526.052 ms
+[INFO   ] DREAMPlace - iteration  173, ( 173,  0,  0), Obj -9.042253E+10, DensityWeight 1.476746E-07, HPWL -9.026633E+10, Overflow 6.711220E-01, MaxDensity 1.924E+02, gamma 6.739514E+02, time 98.065ms
+[INFO   ] DREAMPlace - full step 628.866 ms
+[INFO   ] DREAMPlace - optimizer step 477.911 ms
+[INFO   ] DREAMPlace - iteration  174, ( 174,  0,  0), Obj -9.042274E+10, DensityWeight 1.523835E-07, HPWL -9.026673E+10, Overflow 6.712913E-01, MaxDensity 1.925E+02, gamma 6.730921E+02, time 99.038ms
+[INFO   ] DREAMPlace - full step 581.520 ms
+[INFO   ] DREAMPlace - optimizer step 465.667 ms
+[INFO   ] DREAMPlace - iteration  175, ( 175,  0,  0), Obj -9.042292E+10, DensityWeight 1.572269E-07, HPWL -9.026720E+10, Overflow 6.714436E-01, MaxDensity 1.924E+02, gamma 6.736757E+02, time 78.635ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln175.def
+ment to def/soln150.def
+[ERROR  ] unable to open def/soln150.def for write
+[INFO   ] writing placement to def/soln155.def
+[ERROR  ] unable to open def/soln155.def for write
+[INFO   ] writing placement to def/soln160.def
+[ERROR  ] unable to open def/soln160.def for write
+[INFO   ] writing placement to def/soln165.def
+[ERROR  ] unable to open def/soln165.def for write
+[INFO   ] writing placement to def/soln170.def
+[ERROR  ] unable to open def/soln170.def for write
+[INFO   ] writing placement to def/soln175.de[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.023 seconds
+[INFO   ] DREAMPlace - full step 571.579 ms
+[INFO   ] DREAMPlace - optimizer step 489.533 ms
+[INFO   ] DREAMPlace - iteration  176, ( 176,  0,  0), Obj -9.042310E+10, DensityWeight 1.622080E-07, HPWL -9.026753E+10, Overflow 6.714754E-01, MaxDensity 1.923E+02, gamma 6.742010E+02, time 93.619ms
+[INFO   ] DREAMPlace - full step 587.532 ms
+[INFO   ] DREAMPlace - optimizer step 478.300 ms
+[INFO   ] DREAMPlace - iteration  177, ( 177,  0,  0), Obj -9.042328E+10, DensityWeight 1.673301E-07, HPWL -9.026786E+10, Overflow 6.709421E-01, MaxDensity 1.922E+02, gamma 6.743108E+02, time 80.769ms
+[INFO   ] DREAMPlace - full step 563.620 ms
+[INFO   ] DREAMPlace - optimizer step 506.879 ms
+[INFO   ] DREAMPlace - iteration  178, ( 178,  0,  0), Obj -9.042344E+10, DensityWeight 1.725967E-07, HPWL -9.026819E+10, Overflow 6.708309E-01, MaxDensity 1.920E+02, gamma 6.724731E+02, time 90.415ms
+[INFO   ] DREAMPlace - full step 602.181 ms
+[INFO   ] DREAMPlace - optimizer step 489.219 ms
+[INFO   ] DREAMPlace - iteration  179, ( 179,  0,  0), Obj -9.042354E+10, DensityWeight 1.780113E-07, HPWL -9.026857E+10, Overflow 6.706619E-01, MaxDensity 1.918E+02, gamma 6.720906E+02, time 79.206ms
+[INFO   ] DREAMPlace - full step 573.091 ms
+[INFO   ] DREAMPlace - optimizer step 451.069 ms
+[INFO   ] DREAMPlace - iteration  180, ( 180,  0,  0), Obj -9.042369E+10, DensityWeight 1.835774E-07, HPWL -9.026886E+10, Overflow 6.706681E-01, MaxDensity 1.919E+02, gamma 6.715095E+02, time 94.897ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln180.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 575.721 ms
+[INFO   ] DREAMPlace - optimizer step 496.198 ms
+[INFO   ] DREAMPlace - iteration  181, ( 181,  0,  0), Obj -9.042381E+10, DensityWeight 1.892986E-07, HPWL -9.026924E+10, Overflow 6.704878E-01, MaxDensity 1.919E+02, gamma 6.715311E+02, time 81.362ms
+[INFO   ] DREAMPlace - full step 582.543 ms
+[INFO   ] DREAMPlace - optimizer step 472.165 ms
+[INFO   ] DREAMPlace - iteration  182, ( 182,  0,  0), Obj -9.042396E+10, DensityWeight 1.951785E-07, HPWL -9.026956E+10, Overflow 6.702722E-01, MaxDensity 1.919E+02, gamma 6.709115E+02, time 121.181ms
+[INFO   ] DREAMPlace - full step 598.418 ms
+[INFO   ] DREAMPlace - optimizer step 452.730 ms
+[INFO   ] DREAMPlace - iteration  183, ( 183,  0,  0), Obj -9.042409E+10, DensityWeight 2.012210E-07, HPWL -9.026992E+10, Overflow 6.702130E-01, MaxDensity 1.919E+02, gamma 6.701719E+02, time 84.588ms
+[INFO   ] DREAMPlace - full step 541.641 ms
+[INFO   ] DREAMPlace - optimizer step 494.303 ms
+[INFO   ] DREAMPlace - iteration  184, ( 184,  0,  0), Obj -9.042421E+10, DensityWeight 2.074298E-07, HPWL -9.027020E+10, Overflow 6.700507E-01, MaxDensity 1.919E+02, gamma 6.699691E+02, time 81.135ms
+[INFO   ] DREAMPlace - full step 579.834 ms
+[INFO   ] DREAMPlace - optimizer step 487.103 ms
+[INFO   ] DREAMPlace - iteration  185, ( 185,  0,  0), Obj -9.042432E+10, DensityWeight 2.138089E-07, HPWL -9.027048E+10, Overflow 6.701299E-01, MaxDensity 1.920E+02, gamma 6.694128E+02, time 110.124ms
+[INFO   ] DREAMPlace - 写DEF为了STA
+[INFO   ] DREAMPlace - writing to def/soln185.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 0.025 seconds
+[INFO   ] DREAMPlace - full step 626.422 ms
+[INFO   ] DREAMPlace - optimizer nesterov takes 194.688 seconds
+0
+!!!Dump global placement solution
+[I] plotting to results/superblue4/plot/iter0186.png takes 11.176 seconds
+[INFO   ] DREAMPlace - plotting to results/superblue4/plot/iter0186.png takes 11.199 seconds
+[INFO   ] DREAMPlace - Start legalization
+f
+[ERROR  ] unable to open def/soln175.def for write
+[INFO   ] writing placement to def/soln180.def
+[ERROR  ] unable to open def/soln180.def for write
+[INFO   ] writing placement to def/soln185.def
+[ERROR  ] unable to open def/soln185.def for write
+[INFO   ] writing placement to results/superblue4/plot/iter0186.png
+[WARNING] filename = results/superblue4/plot/iter0186.png, width = 800, height = 445, file format = 3 not used, as DRAWPLACE not enabled
+[INFO   ] Macro legalization: regard 0 cells as dummy fixed (movable macros)
+[INFO   ] Macro legalization takes 0.6965 ms
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 1840
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 58385
+[INFO   ] Standard cell legalization legalizeBin takes 63109.375 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 0
+[DEBUG  ] Standard cell legalization blank_num_bins_y = 1840
+[DEBUG  ] Standard cell legalization iteration 0 with 1x1 bins
+[DEBUG  ] Standard cell legalization #bin_blanks
+[DEBUG  ] #bin_objs = 58385
+[INFO   ] Standard cell legalization legalizeBin takes 60531.230 ms
+[DEBUG  ] Standard cell legalization num_unplaced_cells = 0
+[INFO   ] Greedy legalization takes 151071 ms
+[ERROR  ] row 568 (5112, 5121), overlap node 791697 (16340, 5112, 16390, 5121) with node 278973 (16390, 5112, 16440, 5121), gap 0.00195312
+[ERROR  ] row 1270 (11430, 11439), overlap node 792804 (16382, 11430, 16434, 11439) with node 264471 (16434, 11430, 16484, 11439), gap 0.00195312
+[ERROR  ] row 1281 (11529, 11538), overlap node 792803 (16382, 11529, 16434, 11538) with node 170539 (16434, 11529, 16444, 11538), gap 0.00195312
+[ERROR  ] row 1293 (11637, 11646), overlap node 792802 (16382, 11637, 16434, 11646) with node 479900 (16434, 11637, 16448, 11646), gap 0.00195312
+[ERROR  ] row 1305 (11745, 11754), overlap node 792801 (16382, 11745, 16434, 11754) with node 556962 (16434, 11745, 16446, 11754), gap 0.00195312
+[ERROR  ] row 1316 (11844, 11853), overlap node 792800 (16382, 11844, 16434, 11853) with node 328498 (16434, 11844, 16446, 11853), gap 0.00195312
+[ERROR  ] row 1328 (11952, 11961), overlap node 792799 (16382, 11952, 16434, 11961) with node 253531 (16434, 11952, 16474, 11961), gap 0.00195312
+[ERROR  ] row 1340 (12060, 12069), overlap node 792798 (16382, 12060, 16434, 12069) with node 95496 (16434, 12060, 16484, 12069), gap 0.00195312
+[ERROR  ] row 1351 (12159, 12168), overlap node 792797 (16382, 12159, 16434, 12168) with node 710544 (16434, 12159, 16450, 12168), gap 0.00195312
+[ERROR  ] row 1363 (12267, 12276), overlap node 792796 (16382, 12267, 16434, 12276) with node 243467 (16434, 12267, 16484, 12276), gap 0.00195312
+[ERROR  ] row 1375 (12375, 12384), overlap node 792795 (16382, 12375, 16434, 12384) with node 327590 (16434, 12375, 16448, 12384), gap 0.00195312
+[ERROR  ] row 1386 (12474, 12483), overlap node 792794 (16382, 12474, 16434, 12483) with node 443905 (16434, 12474, 16442, 12483), gap 0.00195312
+[ERROR  ] row 1398 (12582, 12591), overlap node 792793 (16382, 12582, 16434, 12591) with node 354600 (16434, 12582, 16484, 12591), gap 0.00195312
+[ERROR  ] row 1410 (12690, 12699), overlap node 792792 (16382, 12690, 16434, 12699) with node 636622 (16434, 12690, 16438, 12699), gap 0.00195312
+[ERROR  ] row 1421 (12789, 12798), overlap node 792791 (16382, 12789, 16434, 12798) with node 714437 (16434, 12789, 16484, 12798), gap 0.00195312
+[ERROR  ] row 1433 (12897, 12906), overlap node 792790 (16382, 12897, 16434, 12906) with node 521616 (16434, 12897, 16450, 12906), gap 0.00195312
+[ERROR  ] row 1445 (13005, 13014), overlap node 792789 (16382, 13005, 16434, 13014) with node 502013 (16434, 13005, 16450, 13014), gap 0.00195312
+[ERROR  ] row 1456 (13104, 13113), overlap node 792788 (16382, 13104, 16434, 13113) with node 141754 (16434, 13104, 16484, 13113), gap 0.00195312
+[ERROR  ] row 1468 (13212, 13221), overlap node 792787 (16382, 13212, 16434, 13221) with node 181670 (16434, 13212, 16438, 13221), gap 0.00195312
+[ERROR  ] row 1480 (13320, 13329), overlap node 792786 (16382, 13320, 16434, 13329) with node 204422 (16434, 13320, 16440, 13329), gap 0.00195312
+[ERROR  ] row 1491 (13419, 13428), overlap node 792785 (16382, 13419, 16434, 13428) with node 81554 (16434, 13419, 16440, 13428), gap 0.00195312
+[ERROR  ] row 1503 (13527, 13536), overlap node 792784 (16382, 13527, 16434, 13536) with node 277319 (16434, 13527, 16484, 13536), gap 0.00195312
+[ERROR  ] row 1515 (13635, 13644), overlap node 792783 (16382, 13635, 16434, 13644) with node 201886 (16434, 13635, 16440, 13644), gap 0.00195312
+[ERROR  ] row 1526 (13734, 13743), overlap node 792782 (16382, 13734, 16434, 13743) with node 508831 (16434, 13734, 16452, 13743), gap 0.00195312
+[ERROR  ] row 1734 (15606, 15615), overlap node 775921 (15898, 15606, 17916, 16506) with node 327963 (17916, 15606, 17922, 15615), gap 0.00195312
+[ERROR  ] row 1735 (15615, 15624), overlap node 775921 (15898, 15606, 17916, 16506) with node 561823 (17916, 15615, 17920, 15624), gap 0.00195312
+[ERROR  ] row 1736 (15624, 15633), overlap node 775921 (15898, 15606, 17916, 16506) with node 590002 (17916, 15624, 17928, 15633), gap 0.00195312
+[ERROR  ] row 1737 (15633, 15642), overlap node 775921 (15898, 15606, 17916, 16506) with node 347786 (17916, 15633, 17924, 15642), gap 0.00195312
+[ERROR  ] row 1738 (15642, 15651), overlap node 775921 (15898, 15606, 17916, 16506) with node 90299 (17916, 15642, 17926, 15651), gap 0.00195312
+[ERROR  ] row 1739 (15651, 15660), overlap node 775921 (15898, 15606, 17916, 16506) with node 9417 (17916, 15651, 17930, 15660), gap 0.00195312
+[ERROR  ] row 1740 (15660, 15669), overlap node 775921 (15898, 15606, 17916, 16506) with node 37871 (17916, 15660, 17930, 15669), gap 0.00195312
+[ERROR  ] row 1741 (15669, 15678), overlap node 775921 (15898, 15606, 17916, 16506) with node 1277 (17916, 15669, 17930, 15678), gap 0.00195312
+[ERROR  ] row 1742 (15678, 15687), overlap node 775921 (15898, 15606, 17916, 16506) with node 42596 (17916, 15678, 17930, 15687), gap 0.00195312
+[ERROR  ] row 1743 (15687, 15696), overlap node 775921 (15898, 15606, 17916, 16506) with node 444570 (17916, 15687, 17926, 15696), gap 0.00195312
+[ERROR  ] row 1744 (15696, 15705), overlap node 775921 (15898, 15606, 17916, 16506) with node 151907 (17916, 15696, 17966, 15705), gap 0.00195312
+[ERROR  ] row 1745 (15705, 15714), overlap node 775921 (15898, 15606, 17916, 16506) with node 352263 (17916, 15705, 17930, 15714), gap 0.00195312
+[ERROR  ] row 1746 (15714, 15723), overlap node 775921 (15898, 15606, 17916, 16506) with node 191856 (17916, 15714, 17930, 15723), gap 0.00195312
+[ERROR  ] row 1747 (15723, 15732), overlap node 775921 (15898, 15606, 17916, 16506) with node 672160 (17916, 15723, 17924, 15732), gap 0.00195312
+[ERROR  ] row 1748 (15732, 15741), overlap node 775921 (15898, 15606, 17916, 16506) with node 213585 (17916, 15732, 17928, 15741), gap 0.00195312
+[ERROR  ] row 1749 (15741, 15750), overlap node 775921 (15898, 15606, 17916, 16506) with node 381685 (17916, 15741, 17930, 15750), gap 0.00195312
+[ERROR  ] row 1750 (15750, 15759), overlap node 775921 (15898, 15606, 17916, 16506) with node 229965 (17916, 15750, 17920, 15759), gap 0.00195312
+[ERROR  ] row 1751 (15759, 15768), overlap node 775921 (15898, 15606, 17916, 16506) with node 80643 (17916, 15759, 17930, 15768), gap 0.00195312
+[ERROR  ] row 1752 (15768, 15777), overlap node 775921 (15898, 15606, 17916, 16506) with node 699816 (17916, 15768, 17930, 15777), gap 0.00195312
+[ERROR  ] row 1753 (15777, 15786), overlap node 775921 (15898, 15606, 17916, 16506) with node 30601 (17916, 15777, 17924, 15786), gap 0.00195312
+[ERROR  ] row 1754 (15786, 15795), overlap node 775921 (15898, 15606, 17916, 16506) with node 677278 (17916, 15786, 17922, 15795), gap 0.00195312
+[ERROR  ] row 1755 (15795, 15804), overlap node 775921 (15898, 15606, 17916, 16506) with node 536095 (17916, 15795, 17926, 15804), gap 0.00195312
+[ERROR  ] row 1756 (15804, 15813), overlap node 775921 (15898, 15606, 17916, 16506) with node 429713 (17916, 15804, 17966, 15813), gap 0.00195312
+[ERROR  ] row 1757 (15813, 15822), overlap node 775921 (15898, 15606, 17916, 16506) with node 695774 (17916, 15813, 17966, 15822), gap 0.00195312
+[ERROR  ] row 1758 (15822, 15831), overlap node 775921 (15898, 15606, 17916, 16506) with node 156169 (17916, 15822, 17966, 15831), gap 0.00195312
+[ERROR  ] row 1759 (15831, 15840), overlap node 775921 (15898, 15606, 17916, 16506) with node 691838 (17916, 15831, 17966, 15840), gap 0.00195312
+[ERROR  ] row 1777 (15993, 16002), overlap node 775921 (15898, 15606, 17916, 16506) with node 538328 (17916, 15993, 17966, 16002), gap 0.00195312
+[ERROR  ] row 1778 (16002, 16011), overlap node 775921 (15898, 15606, 17916, 16506) with node 336240 (17916, 16002, 17966, 16011), gap 0.00195312
+[ERROR  ] row 1779 (16011, 16020), overlap node 775921 (15898, 15606, 17916, 16506) with node 635361 (17916, 16011, 17966, 16020), gap 0.00195312
+[ERROR  ] row 1780 (16020, 16029), overlap node 775921 (15898, 15606, 17916, 16506) with node 689874 (17916, 16020, 17966, 16029), gap 0.00195312
+[ERROR  ] row 1781 (16029, 16038), overlap node 775921 (15898, 15606, 17916, 16506) with node 362880 (17916, 16029, 17966, 16038), gap 0.00195312
+[ERROR  ] row 1782 (16038, 16047), overlap node 775921 (15898, 15606, 17916, 16506) with node 110077 (17916, 16038, 17966, 16047), gap 0.00195312
+[ERROR  ] row 1783 (16047, 16056), overlap node 775921 (15898, 15606, 17916, 16506) with node 635957 (17916, 16047, 17966, 16056), gap 0.00195312
+[ERROR  ] row 1784 (16056, 16065), overlap node 775921 (15898, 15606, 17916, 16506) with node 746483 (17916, 16056, 17966, 16065), gap 0.00195312
+[ERROR  ] row 1785 (16065, 16074), overlap node 775921 (15898, 15606, 17916, 16506) with node 533917 (17916, 16065, 17966, 16074), gap 0.00195312
+[ERROR  ] row 1786 (16074, 16083), overlap node 775921 (15898, 15606, 17916, 16506) with node 307508 (17916, 16074, 17966, 16083), gap 0.00195312
+[ERROR  ] row 1787 (16083, 16092), overlap node 775921 (15898, 15606, 17916, 16506) with node 274450 (17916, 16083, 17966, 16092), gap 0.00195312
+[ERROR  ] row 1788 (16092, 16101), overlap node 775921 (15898, 15606, 17916, 16506) with node 7791 (17916, 16092, 17966, 16101), gap 0.00195312
+[ERROR  ] row 1789 (16101, 16110), overlap node 775921 (15898, 15606, 17916, 16506) with node 89596 (17916, 16101, 17966, 16110), gap 0.00195312
+[ERROR  ] row 1790 (16110, 16119), overlap node 775921 (15898, 15606, 17916, 16506) with node 75432 (17916, 16110, 17966, 16119), gap 0.00195312
+[ERROR  ] row 1791 (16119, 16128), overlap node 775921 (15898, 15606, 17916, 16506) with node 130241 (17916, 16119, 17966, 16128), gap 0.00195312
+[ERROR  ] row 1792 (16128, 16137), overlap node 775921 (15898, 15606, 17916, 16506) with node 276047 (17916, 16128, 17966, 16137), gap 0.00195312
+[ERROR  ] row 1793 (16137, 16146), overlap node 775921 (15898, 15606, 17916, 16506) with node 196032 (17916, 16137, 17966, 16146), gap 0.00195312
+[ERROR  ] row 1794 (16146, 16155), overlap node 775921 (15898, 15606, 17916, 16506) with node 238977 (17916, 16146, 17966, 16155), gap 0.00195312
+[ERROR  ] row 1795 (16155, 16164), overlap node 775921 (15898, 15606, 17916, 16506) with node 473900 (17916, 16155, 17966, 16164), gap 0.00195312
+[ERROR  ] row 1796 (16164, 16173), overlap node 775921 (15898, 15606, 17916, 16506) with node 221931 (17916, 16164, 17966, 16173), gap 0.00195312
+[ERROR  ] row 1797 (16173, 16182), overlap node 775921 (15898, 15606, 17916, 16506) with node 167388 (17916, 16173, 17966, 16182), gap 0.00195312
+[ERROR  ] row 1798 (16182, 16191), overlap node 775921 (15898, 15606, 17916, 16506) with node 681576 (17916, 16182, 17966, 16191), gap 0.00195312
+[ERROR  ] row 1799 (16191, 16200), overlap node 775921 (15898, 15606, 17916, 16506) with node 570366 (17916, 16191, 17966, 16200), gap 0.00195312
+[ERROR  ] row 1800 (16200, 16209), overlap node 775921 (15898, 15606, 17916, 16506) with node 746853 (17916, 16200, 17966, 16209), gap 0.00195312
+[ERROR  ] row 1801 (16209, 16218), overlap node 775921 (15898, 15606, 17916, 16506) with node 570641 (17916, 16209, 17966, 16218), gap 0.00195312
+[ERROR  ] row 1802 (16218, 16227), overlap node 775921 (15898, 15606, 17916, 16506) with node 305937 (17916, 16218, 17966, 16227), gap 0.00195312
+[ERROR  ] row 1803 (16227, 16236), overlap node 775921 (15898, 15606, 17916, 16506) with node 383782 (17916, 16227, 17966, 16236), gap 0.00195312
+[ERROR  ] row 1804 (16236, 16245), overlap node 775921 (15898, 15606, 17916, 16506) with node 139249 (17916, 16236, 17966, 16245), gap 0.00195312
+[ERROR  ] row 1805 (16245, 16254), overlap node 775921 (15898, 15606, 17916, 16506) with node 20301 (17916, 16245, 17966, 16254), gap 0.00195312
+[ERROR  ] row 1806 (16254, 16263), overlap node 775921 (15898, 15606, 17916, 16506) with node 649876 (17916, 16254, 17966, 16263), gap 0.00195312
+[ERROR  ] row 1807 (16263, 16272), overlap node 775921 (15898, 15606, 17916, 16506) with node 634664 (17916, 16263, 17966, 16272), gap 0.00195312
+[ERROR  ] row 1808 (16272, 16281), overlap node 775921 (15898, 15606, 17916, 16506) with node 21305 (17916, 16272, 17966, 16281), gap 0.00195312
+[ERROR  ] row 1809 (16281, 16290), overlap node 775921 (15898, 15606, 17916, 16506) with node 281056 (17916, 16281, 17966, 16290), gap 0.00195312
+[ERROR  ] row 1810 (16290, 16299), overlap node 775921 (15898, 15606, 17916, 16506) with node 259850 (17916, 16290, 17966, 16299), gap 0.00195312
+[ERROR  ] row 1811 (16299, 16308), overlap node 775921 (15898, 15606, 17916, 16506) with node 680326 (17916, 16299, 17966, 16308), gap 0.00195312
+[ERROR  ] row 1812 (16308, 16317), overlap node 775921 (15898, 15606, 17916, 16506) with node 68899 (17916, 16308, 17966, 16317), gap 0.00195312
+[ERROR  ] row 1813 (16317, 16326), overlap node 775921 (15898, 15606, 17916, 16506) with node 398837 (17916, 16317, 17966, 16326), gap 0.00195312
+[ERROR  ] row 1814 (16326, 16335), overlap node 775921 (15898, 15606, 17916, 16506) with node 634646 (17916, 16326, 17966, [ERROR  ] DREAMPlace - legality check failed in greedy legalization
+[INFO   ] DREAMPlace - legalization takes 151.193 seconds
+[INFO   ] DREAMPlace - iteration  186, HPWL -8.399733E+10, time 48.862ms
+16335), gap 0.00195312
+[ERROR  ] row 1815 (16335, 16344), overlap node 775921 (15898, 15606, 17916, 16506) with node 609986 (17916, 16335, 17966, 16344), gap 0.00195312
+[ERROR  ] row 1816 (16344, 16353), overlap node 775921 (15898, 15606, 17916, 16506) with node 524462 (17916, 16344, 17966, 16353), gap 0.00195312
+[ERROR  ] row 1817 (16353, 16362), overlap node 775921 (15898, 15606, 17916, 16506) with node 743898 (17916, 16353, 17966, 16362), gap 0.00195312
+[INFO   ] Legality check takes 111.08 ms
+[INFO   ] [I] plotting to results/superblue4/plot/iter0187.png takes 10.385 seconds
+[INFO   ] DREAMPlace - plotting to results/superblue4/plot/iter0187.png takes 10.409 seconds
+[I] plotting to results/superblue4/plot/iter0187.png takes 11.212 seconds
+[INFO   ] DREAMPlace - plotting to results/superblue4/plot/iter0187.png takes 11.238 seconds
+[INFO   ] DREAMPlace - non-linear placement takes 392.58 seconds
+FINAL
+FINAL
+[INFO   ] DREAMPlace - writing to results/superblue4/superblue4.gp.def
+[INFO   ] DREAMPlace - write SolutionFileFormat.DEF takes 1.302 seconds
+FINAL TIMING CHECK
+Writing parasitic for 0 nets out of 802513
+Writing parasitic for 10000 nets out of 802513
+Writing parasitic for 20000 nets out of 802513
+Writing parasitic for 30000 nets out of 802513
+Writing parasitic for 40000 nets out of 802513
+Writing parasitic for 50000 nets out of 802513
+Writing parasitic for 60000 nets out of 802513
+Writing parasitic for 70000 nets out of 802513
+Writing parasitic for 80000 nets out of 802513
+Writing parasitic for 90000 nets out of 802513
+Writing parasitic for 100000 nets out of 802513
+Writing parasitic for 110000 nets out of 802513
+Writing parasitic for 120000 nets out of 802513
+Writing parasitic for 130000 nets out of 802513
+Writing parasitic for 140000 nets out of 802513
+Writing parasitic for 150000 nets out of 802513
+Writing parasitic for 160000 nets out of 802513
+Writing parasitic for 170000 nets out of 802513
+Writing parasitic for 180000 nets out of 802513
+Writing parasitic for 190000 nets out of 802513
+Writing parasitic for 200000 nets out of 802513
+Writing parasitic for 210000 nets out of 802513
+Writing parasitic for 220000 nets out of 802513
+Writing parasitic for 230000 nets out of 802513
+Writing parasitic for 240000 nets out of 802513
+Writing parasitic for 250000 nets out of 802513
+Writing parasitic for 260000 nets out of 802513
+Writing parasitic for 270000 nets out of 802513
+Writing parasitic for 280000 nets out of 802513
+Writing parasitic for 290000 nets out of 802513
+Writing parasitic for 300000 nets out of 802513
+Writing parasitic for 310000 nets out of 802513
+Writing parasitic for 320000 nets out of 802513
+Writing parasitic for 330000 nets out of 802513
+Writing parasitic for 340000 nets out of 802513
+Writing parasitic for 350000 nets out of 802513
+Writing parasitic for 360000 nets out of 802513
+Writing parasitic for 370000 nets out of 802513
+Writing parasitic for 380000 nets out of 802513
+Writing parasitic for 390000 nets out of 802513
+Writing parasitic for 400000 nets out of 802513
+Writing parasitic for 410000 nets out of 802513
+Writing parasitic for 420000 nets out of 802513
+Writing parasitic for 430000 nets out of 802513
+Writing parasitic for 440000 nets out of 802513
+Writing parasitic for 450000 nets out of 802513
+Writing parasitic for 460000 nets out of 802513
+Writing parasitic for 470000 nets out of 802513
+Writing parasitic for 480000 nets out of 802513
+Writing parasitic for 490000 nets out of 802513
+Writing parasitic for 500000 nets out of 802513
+Writing parasitic for 510000 nets out of 802513
+Writing parasitic for 520000 nets out of 802513
+Writing parasitic for 530000 nets out of 802513
+Writing parasitic for 540000 nets out of 802513
+Writing parasitic for 550000 nets out of 802513
+Writing parasitic for 560000 nets out of 802513
+Writing parasitic for 570000 nets out of 802513
+Writing parasitic for 580000 nets out of 802513
+Writing parasitic for 590000 nets out of 802513
+Writing parasitic for 600000 nets out of 802513
+Writing parasitic for 610000 nets out of 802513
+Writing parasitic for 620000 nets out of 802513
+Writing parasitic for 630000 nets out of 802513
+Writing parasitic for 640000 nets out of 802513
+Writing parasitic for 650000 nets out of 802513
+Writing parasitic for 660000 nets out of 802513
+Writing parasitic for 670000 nets out of 802513
+Writing parasitic for 680000 nets out of 802513
+Writing parasitic for 690000 nets out of 802513
+Writing parasitic for 700000 nets out of 802513
+Writing parasitic for 710000 nets out of 802513
+Writing parasitic for 720000 nets out of 802513
+Writing parasitic for 730000 nets out of 802513
+Writing parasitic for 740000 nets out of 802513
+Writing parasitic for 750000 nets out of 802513
+Writing parasitic for 760000 nets out of 802513
+Writing parasitic for 770000 nets out of 802513
+Writing parasitic for 780000 nets out of 802513
+Writing parasitic for 790000 nets out of 802513
+Writing parasitic for 800000 nets out of 802513
+Start running STA
+Run timer - 71.88854026794434 s 
+Time-driven weights
+Tns, Wns
+-16413100000.0 -644126000.0
+===================
+[INFO   ] DREAMPlace - placement takes 604.591 seconds
+writing placement to results/superblue4/plot/iter0187.png
+[WARNING] filename = results/superblue4/plot/iter0187.png, width = 800, height = 445, file format = 3 not used, as DRAWPLACE not enabled
+[INFO   ] writing placement to results/superblue4/plot/iter0187.png
+[WARNING] filename = results/superblue4/plot/iter0187.png, width = 800, height = 445, file format = 3 not used, as DRAWPLACE not enabled
+[INFO   ] writing placement to results/superblue4/superblue4.gp.def

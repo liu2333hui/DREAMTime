@@ -1,0 +1,17 @@
+set_num_threads 1
+read_celllib -early simple_Early.lib
+read_celllib -late simple_Late.lib
+read_verilog simple.v
+read_sdc simple.sdc.cleaned
+read_spef tmp.spef
+report_tns
+report_wns
+report_slack -rise -max -pin inp1
+report_slack -rise -max -pin inp2
+report_slack -rise -max -pin iccad_clk
+report_slack -rise -max -pin out
+report_slack -rise -max -pin u1:o
+report_slack -rise -max -pin u2:o
+report_slack -rise -max -pin u2:b
+report_slack -rise -max -pin u3:o
+report_slack -rise -max -pin f1:ck

@@ -1,0 +1,228 @@
+========================================================
+                       DREAMPlace
+            Yibo Lin (http://yibolin.com)
+   David Z. Pan (http://users.ece.utexas.edu/~dpan)
+========================================================
+[INFO   ] DREAMPlace - parameters = {'aux_input': '', 'lef_input': 'superblue7.lef', 'def_input': 'superblue7.def', 'verilog_input': 'superblue7.v', 'gpu': 0, 'num_bins_x': 512, 'num_bins_y': 512, 'global_place_stages': [{'num_bins_x': 512, 'num_bins_y': 512, 'iteration': 1000, 'learning_rate': 0.01, 'wirelength': 'weighted_average', 'optimizer': 'nesterov'}], 'target_density': 1.0, 'density_weight': 8e-05, 'random_seed': 1000, 'result_dir': 'results', 'scale_factor': 0.0, 'shift_factor': [0.0, 0.0], 'ignore_net_degree': 100, 'gp_noise_ratio': 0.025, 'enable_fillers': 1, 'global_place_flag': 1, 'legalize_flag': 1, 'detailed_place_flag': 0, 'stop_overflow': 0.1, 'dtype': 'float32', 'detailed_place_engine': '', 'detailed_place_command': '', 'plot_flag': 1, 'RePlAce_ref_hpwl': 350000, 'RePlAce_LOWER_PCOF': 0.95, 'RePlAce_UPPER_PCOF': 1.05, 'gamma': 4, 'RePlAce_skip_energy_flag': 0, 'random_center_init_flag': 1, 'sort_nets_by_degree': 0, 'num_threads': 1, 'dump_global_place_solution_flag': 0, 'dump_legalize_solution_flag': 1, 'routability_opt_flag': 0, 'route_num_bins_x': 512, 'route_num_bins_y': 512, 'node_area_adjust_overflow': 0.15, 'max_num_area_adjust': 3, 'adjust_nctugr_area_flag': 0, 'adjust_rudy_area_flag': 1, 'adjust_pin_area_flag': 1, 'area_adjust_stop_ratio': 0.01, 'route_area_adjust_stop_ratio': 0.01, 'pin_area_adjust_stop_ratio': 0.05, 'unit_horizontal_capacity': 1.5625, 'unit_vertical_capacity': 1.45, 'unit_pin_capacity': 0.058, 'max_route_opt_adjust_rate': 2.0, 'route_opt_adjust_exponent': 2.0, 'pin_stretch_ratio': 1.414213562, 'max_pin_opt_adjust_rate': 1.5, 'deterministic_flag': 0, 'timer_sdc': 'superblue7.sdc', 'timer_libs': ['superblue7_Early.lib', 'superblue7_Late.lib'], 'r_per_u': 2.535, 'c_per_u': 1.6e-16, 'timing_driven': 1}
+[INFO   ] lef_input = superblue7.lef 
+[INFO   ] def_input = superblue7.def
+[INFO   ] verilog_input = superblue7.v
+[INFO   ] bookshelf_aux_input = 
+[INFO   ] bookshelf_pl_input = 
+[INFO   ] def_size_input = 
+[INFO   ] def_output = superblue7-out.def
+[INFO   ] rpt_output = 
+[INFO   ] target_util = 0
+[INFO   ] max_displace = 0
+[INFO   ] bin size = (10, 10) #rows
+[INFO   ] sbin size = (5, 5) #rows
+[INFO   ] bin_space_threshold = 0.2
+[INFO   ] abu = 2,10 5,5 10,2 20,1 
+[INFO   ] def_ignore_cells = 
+[INFO   ] macro_obs_aware_layers = 
+[INFO   ] enable_place = true
+[INFO   ] enable_legalize = true
+[INFO   ] evaluate_overlap = false
+[INFO   ] move_multi_row_cell = true
+[INFO   ] align_power_line = true
+[INFO   ] cluster_cell = false
+[INFO   ] sort_nets_by_degree = false
+[INFO   ] file_format = DEF
+[INFO   ] max_iters = 6
+[INFO   ] reading superblue7.lef
+[INFO   ] reading superblue7.def
+[INFO   ] detect 3163 rows, 1931639 components, 6501 IO pins, 0 nets, 0 blockages
+[INFO   ] set CORE site to core, 380 x 3420, id = 0
+[INFO   ] reading superblue7.v
+[WARNING] no Bookshelf file specified
+[WARNING] no additional Bookshelf .pl file specified
+[WARNING] 0 nets with 0 pins from same nodes
+[WARNING] 0 nets should be ignored due to not enough pins
+[INFO   ] sort nodes in the order of movable and fixed
+[INFO   ] Group cells for fence regions
+[INFO   ] Construct 0 groups
+[INFO   ] Fence region groups done
+[DEBUG  ] num_terminals 65755, numFixed 65755, numPlaceBlockages 0, num_terminal_NIs 6501
+[INFO   ] -- Converting Node Orientat[INFO   ] DREAMPlace - set shift_factor = (13680, 6840), as original row bbox = (13680, 6840, 1.21022e+07, 1.08243e+07)
+[INFO   ] DREAMPlace - set scale_factor = 0.00263158, as site_width = 380
+[INFO   ] DREAMPlace - shift coordinate system by (13680, 6840), scale coordinate system by 0.00263158
+[INFO   ] DREAMPlace - 
+================================= Benchmark Statistics =================================
+#nodes = 1938140, #terminals = 65755, # terminal_NIs = 6501, #movable = 1865884, #nets = 1933945
+die area = (0, 0, 31812, 28467) 9.05592e+08
+row height = 9, site width = 1
+#pins = 6372094, #movable_pins = 6151276
+total_movable_node_area = 2.92709e+08, total_fixed_node_area = 3.9967e+08, total_space_area = 5.12758e+08
+utilization = 0.570851, target_density = 1
+use placeable_area = 5.12758e+08 to compute fillers
+total_filler_node_area = 2.20049e+08, #fillers = 1495905, filler sizes = 16.3446x9
+num_bins = 512x512, bin sizes = 6.90365x6.17773
+========================================================================================
+[INFO   ] DREAMPlace - reading benchmark takes 58.3169 seconds
+[INFO   ] DREAMPlace - reading database takes 58.32 seconds
+Writing parasitic for 0 nets out of 1933945
+Writing parasitic for 10000 nets out of 1933945
+Writing parasitic for 20000 nets out of 1933945
+Writing parasitic for 30000 nets out of 1933945
+Writing parasitic for 40000 nets out of 1933945
+Writing parasitic for 50000 nets out of 1933945
+Writing parasitic for 60000 nets out of 1933945
+Writing parasitic for 70000 nets out of 1933945
+Writing parasitic for 80000 nets out of 1933945
+Writing parasitic for 90000 nets out of 1933945
+Writing parasitic for 100000 nets out of 1933945
+Writing parasitic for 110000 nets out of 1933945
+Writing parasitic for 120000 nets out of 1933945
+Writing parasitic for 130000 nets out of 1933945
+Writing parasitic for 140000 nets out of 1933945
+Writing parasitic for 150000 nets out of 1933945
+Writing parasitic for 160000 nets out of 1933945
+Writing parasitic for 170000 nets out of 1933945
+Writing parasitic for 180000 nets out of 1933945
+Writing parasitic for 190000 nets out of 1933945
+Writing parasitic for 200000 nets out of 1933945
+Writing parasitic for 210000 nets out of 1933945
+Writing parasitic for 220000 nets out of 1933945
+Writing parasitic for 230000 nets out of 1933945
+Writing parasitic for 240000 nets out of 1933945
+Writing parasitic for 250000 nets out of 1933945
+Writing parasitic for 260000 nets out of 1933945
+Writing parasitic for 270000 nets out of 1933945
+Writing parasitic for 280000 nets out of 1933945
+Writing parasitic for 290000 nets out of 1933945
+Writing parasitic for 300000 nets out of 1933945
+Writing parasitic for 310000 nets out of 1933945
+Writing parasitic for 320000 nets out of 1933945
+Writing parasitic for 330000 nets out of 1933945
+Writing parasitic for 340000 nets out of 1933945
+Writing parasitic for 350000 nets out of 1933945
+Writing parasitic for 360000 nets out of 1933945
+Writing parasitic for 370000 nets out of 1933945
+Writing parasitic for 380000 nets out of 1933945
+Writing parasitic for 390000 nets out of 1933945
+Writing parasitic for 400000 nets out of 1933945
+Writing parasitic for 410000 nets out of 1933945
+Writing parasitic for 420000 nets out of 1933945
+Writing parasitic for 430000 nets out of 1933945
+Writing parasitic for 440000 nets out of 1933945
+Writing parasitic for 450000 nets out of 1933945
+Writing parasitic for 460000 nets out of 1933945
+Writing parasitic for 470000 nets out of 1933945
+Writing parasitic for 480000 nets out of 1933945
+Writing parasitic for 490000 nets out of 1933945
+Writing parasitic for 500000 nets out of 1933945
+Writing parasitic for 510000 nets out of 1933945
+Writing parasitic for 520000 nets out of 1933945
+Writing parasitic for 530000 nets out of 1933945
+Writing parasitic for 540000 nets out of 1933945
+Writing parasitic for 550000 nets out of 1933945
+Writing parasitic for 560000 nets out of 1933945
+Writing parasitic for 570000 nets out of 1933945
+Writing parasitic for 580000 nets out of 1933945
+Writing parasitic for 590000 nets out of 1933945
+Writing parasitic for 600000 nets out of 1933945
+Writing parasitic for 610000 nets out of 1933945
+Writing parasitic for 620000 nets out of 1933945
+Writing parasitic for 630000 nets out of 1933945
+Writing parasitic for 640000 nets out of 1933945
+Writing parasitic for 650000 nets out of 1933945
+Writing parasitic for 660000 nets out of 1933945
+Writing parasitic for 670000 nets out of 1933945
+Writing parasitic for 680000 nets out of 1933945
+Writing parasitic for 690000 nets out of 1933945
+Writing parasitic for 700000 nets out of 1933945
+Writing parasitic for 710000 nets out of 1933945
+Writing parasitic for 720000 nets out of 1933945
+Writing parasitic for 730000 nets out of 1933945
+Writing parasitic for 740000 nets out of 1933945
+Writing parasitic for 750000 nets out of 1933945
+Writing parasitic for 760000 nets out of 1933945
+Writing parasitic for 770000 nets out of 1933945
+Writing parasitic for 780000 nets out of 1933945
+Writing parasitic for 790000 nets out of 1933945
+Writing parasitic for 800000 nets out of 1933945
+Writing parasitic for 810000 nets out of 1933945
+Writing parasitic for 820000 nets out of 1933945
+Writing parasitic for 830000 nets out of 1933945
+Writing parasitic for 840000 nets out of 1933945
+Writing parasitic for 850000 nets out of 1933945
+Writing parasitic for 860000 nets out of 1933945
+Writing parasitic for 870000 nets out of 1933945
+Writing parasitic for 880000 nets out of 1933945
+Writing parasitic for 890000 nets out of 1933945
+Writing parasitic for 900000 nets out of 1933945
+Writing parasitic for 910000 nets out of 1933945
+Writing parasitic for 920000 nets out of 1933945
+Writing parasitic for 930000 nets out of 1933945
+Writing parasitic for 940000 nets out of 1933945
+Writing parasitic for 950000 nets out of 1933945
+Writing parasitic for 960000 nets out of 1933945
+Writing parasitic for 970000 nets out of 1933945
+Writing parasitic for 980000 nets out of 1933945
+Writing parasitic for 990000 nets out of 1933945
+Writing parasitic for 1000000 nets out of 1933945
+Writing parasitic for 1010000 nets out of 1933945
+Writing parasitic for 1020000 nets out of 1933945
+Writing parasitic for 1030000 nets out of 1933945
+Writing parasitic for 1040000 nets out of 1933945
+Writing parasitic for 1050000 nets out of 1933945
+Writing parasitic for 1060000 nets out of 1933945
+Writing parasitic for 1070000 nets out of 1933945
+Writing parasitic for 1080000 nets out of 1933945
+Writing parasitic for 1090000 nets out of 1933945
+Writing parasitic for 1100000 nets out of 1933945
+Writing parasitic for 1110000 nets out of 1933945
+Writing parasitic for 1120000 nets out of 1933945
+Writing parasitic for 1130000 nets out of 1933945
+Writing parasitic for 1140000 nets out of 1933945
+Writing parasitic for 1150000 nets out of 1933945
+Writing parasitic for 1160000 nets out of 1933945
+Writing parasitic for 1170000 nets out of 1933945
+Writing parasitic for 1180000 nets out of 1933945
+Writing parasitic for 1190000 nets out of 1933945
+Writing parasitic for 1200000 nets out of 1933945
+Writing parasitic for 1210000 nets out of 1933945
+Writing parasitic for 1220000 nets out of 1933945
+Writing parasitic for 1230000 nets out of 1933945
+Writing parasitic for 1240000 nets out of 1933945
+Writing parasitic for 1250000 nets out of 1933945
+Writing parasitic for 1260000 nets out of 1933945
+Writing parasitic for 1270000 nets out of 1933945
+Writing parasitic for 1280000 nets out of 1933945
+Writing parasitic for 1290000 nets out of 1933945
+Writing parasitic for 1300000 nets out of 1933945
+Writing parasitic for 1310000 nets out of 1933945
+Writing parasitic for 1320000 nets out of 1933945
+Writing parasitic for 1330000 nets out of 1933945
+Writing parasitic for 1340000 nets out of 1933945
+Writing parasitic for 1350000 nets out of 1933945
+Writing parasitic for 1360000 nets out of 1933945
+Writing parasitic for 1370000 nets out of 1933945
+Writing parasitic for 1380000 nets out of 1933945
+Writing parasitic for 1390000 nets out of 1933945
+Writing parasitic for 1400000 nets out of 1933945
+Writing parasitic for 1410000 nets out of 1933945
+Writing parasitic for 1420000 nets out of 1933945
+Writing parasitic for 1430000 nets out of 1933945
+Writing parasitic for 1440000 nets out of 1933945
+Writing parasitic for 1450000 nets out of 1933945
+Writing parasitic for 1460000 nets out of 1933945
+Writing parasitic for 1470000 nets out of 1933945
+Writing parasitic for 1480000 nets out of 1933945
+Writing parasitic for 1490000 nets out of 1933945
+Writing parasitic for 1500000 nets out of 1933945
+Writing parasitic for 1510000 nets out of 1933945
+Writing parasitic for 1520000 nets out of 1933945
+Writing parasitic for 1530000 nets out of 1933945
+Writing parasitic for 1540000 nets out of 1933945
+Writing parasitic for 1550000 nets out of 1933945
+Writing parasitic for 1560000 nets out of 1933945
+Writing parasitic for 1570000 nets out of 1933945
+Writing parasitic for 1580000 nets out of 1933945
+Writing parasitic for 1590000 nets out of 1933945
+Writing parasitic for 1600000 nets out of 1933945
+Writing parasitic for 1610000 nets out of 1933945
+Writing parasitic for 1620000 nets out of 1933945
+Writing parasitic for 1630000 nets out of 1933945
+Writing parasitic for 1640000 nets out of 1933945
+Writing parasitic for 1650000 nets out of 1933945

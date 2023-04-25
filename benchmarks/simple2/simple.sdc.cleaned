@@ -1,0 +1,27 @@
+# Synopsys Design Constraints Format
+# Copyright ? 2011, Synopsys, Inc. and others. All Rights reserved.
+
+# clock definition
+create_clock -name mclk -period 10.0 [get_ports iccad_clk]
+set_input_delay 10.0 [get_ports iccad_clk] -clock mclk
+set_input_transition 10.0 [get_ports iccad_clk] -clock mclk
+
+# input delays
+set_input_delay  5.0 [get_ports {inp1}] -clock mclk
+set_input_delay  1.0 [get_ports {inp2}] -clock mclk
+set_input_delay 25.0 [get_ports {iccad_clk}] -clock mclk
+
+
+
+# input drivers
+set_input_transition 10.0 [get_ports {inp1}] -clock mclk
+set_input_transition 10.0 [get_ports {inp2}] -clock mclk
+set_input_transition 10.0 [get_ports {iccad_clk}] -clock mclk
+
+
+
+# output delays
+set_output_delay  -10.0 [get_ports {out}] -clock mclk
+
+# output loads
+set_load -pin_load  4.0 [get_ports {out}]
